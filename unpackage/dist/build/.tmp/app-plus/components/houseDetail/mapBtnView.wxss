@@ -1,0 +1,43 @@
+
+.scroll_box {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  white-space: nowrap;
+  padding: 46rpx 20rpx 15rpx 0;
+  box-sizing: border-box;
+}
+.map_item_new {
+  display: inline-block;
+  /* width: 120upx; */
+  /* text-align: center; */
+  margin-right: 60rpx;
+  height: 50rpx;
+}
+.map_img {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+}
+.map_text {
+  font-size: 30rpx;
+  text-align: left;
+  margin: 0 auto 0;
+  color: #89909d;
+}
+.map_text-active::before {
+  content: "";
+  width: 40rpx;
+  height: 6rpx;
+  background: #fcde15;
+  border-radius: 3rpx;
+  position: absolute;
+  left: 50%;
+  bottom: -10rpx;
+  margin-left: -20rpx;
+  /* transform: translateX(-50%); */
+}
+.map_text-active {
+  color: #191f25;
+}
+

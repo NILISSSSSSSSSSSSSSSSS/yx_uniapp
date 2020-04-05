@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "collect-form-id": "/components/collectFormId",
+    "circle-process": "/components/echarts/circleProcess",
+    "ring-chart": "/components/echarts/ringChart"
+  }
+}

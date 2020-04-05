@@ -1,0 +1,169 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/customIndex/customIndex",
+    "pages/msgList/msgList",
+    "pages/buildList/buildList",
+    "pages/mine/mine",
+    "pagesMsg/contacts/contacts",
+    "pagesMsg/remindMsg/remindMsg",
+    "pagesMsg/systemMsg/systemMsg",
+    "pagesSet/aboutUs/aboutUs",
+    "pagesSet/forgetPassword/forgetPassword",
+    "pagesSet/resetPassword/resetPassword",
+    "pagesSet/changePassword/changePassword",
+    "pagesSet/login/login",
+    "pagesSet/personalCenter/personalCenter",
+    "pagesSet/setPage/setPage",
+    "pagesSet/setPage/setPageAdviser",
+    "pagesSet/changePayPassword/changePayPassword",
+    "pagesTool/map/nearInfoMap",
+    "pagesTool/chooseDate/chooseWeek",
+    "pagesTool/chooseDate/chooseYear",
+    "pagesTool/chooseDate/chooseDay",
+    "pagesTool/livePlayer/livePlayer",
+    "pagesStatistics/analysis/analysis",
+    "pagesStaff/staffList/staffList",
+    "pagesStaff/addStaff/addStaff",
+    "pagesStaff/staffCustomerList/staffCustomerList",
+    "pagesStaff/customerTransfer/chooseCustomer",
+    "pagesStaff/customerTransfer/chooseStaff",
+    "pagesCustomer/customerList/customerList",
+    "pagesCustomer/newCustomer/newCustomer",
+    "pagesCustomer/arriveVisit/arriveVisit",
+    "pagesCustomer/waitCommission/waitCommission",
+    "pagesCustomer/customerDetail/customerDetail",
+    "pagesCustomer/archiveManage/archiveManage",
+    "pagesCustomer/writeFollow/writeFollow",
+    "pagesCustomer/customerRegistration/customerRegistration",
+    "pagesCustomer/upDaiKanQueRenShu/upDaiKanQueRenShu",
+    "pagesCustomer/archiveCustomerList/archiveCustomerList",
+    "pagesCustomer/subscriptionInfo/subscriptionInfo",
+    "pagesCustomer/signInfo/signInfo",
+    "pagesCustomer/applyRenGou/applyRenGou",
+    "pagesBuild/addEditBuilding/addEditBuildingFirst",
+    "pagesBuild/addEditBuilding/addEditBuildingSecond",
+    "pagesBuild/buildDetail/buildDetail",
+    "pagesBuild/buildDetail/information",
+    "pagesBuild/buildDetail/pageRules",
+    "pagesBuild/buildDetail/vrPage",
+    "pagesBuild/buildDetail/photoList",
+    "pagesBuild/buildDetail/photoListSwiper",
+    "pagesBuild/buildDetail/distributionDynamic",
+    "pagesBuild/buildDetail/distributionDynamicDetail",
+    "pagesBuild/buildDetail/releaseTheStory",
+    "pagesBuild/buildDetail/skillPointList",
+    "pagesBuild/buildDetail/skillPointDetail",
+    "pagesBuild/buildDetail/distributionType",
+    "pagesBuild/buildDetail/addEditDistributionType",
+    "pagesBuild/buildDetail/rulesCooperationEdit",
+    "pagesBuild/buildDetail/commissionRuleEdit",
+    "pagesBuild/buildDetail/precautionEdit",
+    "pagesStatistics/customer_analysis/customer_analysis"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF",
+    "softinputNavBar": "none",
+    "scrollIndicator": "none"
+  },
+  "tabBar": {
+    "color": "#aeb7c2",
+    "selectedColor": "#40434e",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "position": "bottom",
+    "fontSize": "10px",
+    "iconWidth": "28px",
+    "spacing": "5px",
+    "height": "58px",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/tabbar/home_default.png",
+        "selectedIconPath": "static/images/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/customIndex/customIndex",
+        "text": "客户",
+        "iconPath": "static/images/tabbar/custorm_default.png",
+        "selectedIconPath": "static/images/tabbar/custorm_active.png"
+      },
+      {
+        "pagePath": "pages/msgList/msgList",
+        "text": "消息",
+        "iconPath": "static/images/tabbar/msg_default.png",
+        "selectedIconPath": "static/images/tabbar/msg_active.png"
+      },
+      {
+        "pagePath": "pages/buildList/buildList",
+        "text": "楼盘",
+        "iconPath": "static/images/tabbar/build_default.png",
+        "selectedIconPath": "static/images/tabbar/build_active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/images/tabbar/my_default.png",
+        "selectedIconPath": "static/images/tabbar/my_active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 30000,
+    "connectSocket": 30000,
+    "uploadFile": 30000,
+    "downloadFile": 30000
+  },
+  "nvue": {
+    "pages": {
+      "pagesMsg/msgDetail/msgDetail.html": {
+        "window": {
+          "usingComponents": {},
+          "navigationBarTitleText": "",
+          "navigationStyle": "custom",
+          "backgroundColor": "#f8f8f8",
+          "softinputNavBar": "none",
+          "scrollIndicator": "none"
+        },
+        "nvue": true
+      },
+      "pagesMsg/msgDetail/videoChart.html": {
+        "window": {
+          "usingComponents": {},
+          "navigationBarTitleText": "视频聊天",
+          "bounce": "none",
+          "softinputNavBar": "none",
+          "scrollIndicator": "none"
+        },
+        "nvue": true
+      },
+      "pagesMsg/msgDetail/audioChart.html": {
+        "window": {
+          "usingComponents": {},
+          "navigationBarTitleText": "视频聊天",
+          "bounce": "none",
+          "softinputNavBar": "none",
+          "scrollIndicator": "none"
+        },
+        "nvue": true
+      }
+    }
+  },
+  "nvueCompiler": "uni-app",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "新房联动营销",
+  "compilerVersion": "2.5.1",
+  "usingComponents": {
+    "collect-form-id": "/components/collectFormId",
+    "scroll-loading": "/components/scrollLoading",
+    "show-modal": "/components/showModal"
+  }
+}

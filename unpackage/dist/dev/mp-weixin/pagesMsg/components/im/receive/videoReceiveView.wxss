@@ -1,0 +1,57 @@
+
+.videoReceiveView.data-v-60990815{
+		background-color:#fff;
+		position:relative;
+		margin-left:16rpx;
+		padding: 0;
+		box-sizing:border-box;
+		max-width:70%;
+		border-radius:16rpx;
+		word-break:break-all;
+		font-size:15px;
+		text-align:center;
+		width: 250rpx;
+		height: 400rpx;
+		overflow: hidden;
+}
+.videoReceiveView_bg.data-v-60990815{
+		position: absolute;
+		top: 0;
+		z-index: 80;
+		width: 100%;
+		left: 0;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+}
+.videoReceiveView_cover_img.data-v-60990815{
+        width: 80rpx;
+        height: 80rpx;
+        margin: auto;
+}
+	/* 视频播放 */
+.video_fixed.data-v-60990815{
+		position: fixed;
+		width:100%;
+		height:100%;
+		left: 0;
+		top: 0;
+		background:#000;
+		z-index:50000;
+}
+.receive_video.data-v-60990815{
+		width: 100%;
+		margin: auto 0;
+}
+.close_video.data-v-60990815{
+		position:absolute;
+		left:0;
+		right:0;
+		margin:auto;
+		bottom:120rpx;
+		width:70rpx;
+		height:70rpx;
+		background:url(http://cdn.haofang.net/static/uuminiapp/detail/close-viedo.png) no-repeat;
+		background-size:100%;
+}
+

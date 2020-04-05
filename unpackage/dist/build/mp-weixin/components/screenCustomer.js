@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/screenCustomer"],{"468e":function(t,n,a){"use strict";var e=function(){var t=this,n=t.$createElement;t._self._c},u=[];a.d(n,"a",function(){return e}),a.d(n,"b",function(){return u})},"8d6f":function(t,n,a){},c14d:function(t,n,a){"use strict";var e=a("8d6f"),u=a.n(e);u.a},d3a0:function(t,n,a){"use strict";a.r(n);var e=a("dc8f"),u=a.n(e);for(var c in e)"default"!==c&&function(t){a.d(n,t,function(){return e[t]})}(c);n["default"]=u.a},dc8f:function(t,n,a){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var e={name:"screenCustomer",props:{custStatus:{type:Number,default:-1e3},paidStatus:{type:Number,default:0}},data:function(){return{icons:{"-3":"http://cdn.haofang.net/static/xffx-uniapp/customer/daikanguoqi.png","-2":"http://cdn.haofang.net/static/xffx-uniapp/customer/baobeiguoqi.png","-1":"http://cdn.haofang.net/static/xffx-uniapp/customer/chaxiaorengou.png",0:"http://cdn.haofang.net/static/xffx-uniapp/customer/wuxiaokehu.png",6:"http://cdn.haofang.net/static/xffx-uniapp/customer/yijieyong_icon.png",7:"http://cdn.haofang.net/static/xffx-uniapp/customer/yituiyong.png"},hasStatusImgList:"http://cdn.haofang.net/static/xfldDeveloper/customer/active_blue.jpg",noStatusImgList:"http://cdn.haofang.net/static/xfldDeveloper/customer/default_gray.png"}}};n.default=e},ea18:function(t,n,a){"use strict";a.r(n);var e=a("468e"),u=a("d3a0");for(var c in u)"default"!==c&&function(t){a.d(n,t,function(){return u[t]})}(c);a("c14d");var o=a("2877"),f=Object(o["a"])(u["default"],e["a"],e["b"],!1,null,"1220cf30",null);n["default"]=f.exports}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/screenCustomer-create-component',
+    {
+        'components/screenCustomer-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("ea18"))
+        })
+    },
+    [['components/screenCustomer-create-component']]
+]);

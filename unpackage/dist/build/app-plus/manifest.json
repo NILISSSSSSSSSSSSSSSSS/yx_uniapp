@@ -1,0 +1,229 @@
+{
+  "@platforms": [
+    "android",
+    "iPhone",
+    "iPad"
+  ],
+  "id": "__UNI__E7AD8A0",
+  "name": "新房联动营销",
+  "version": {
+    "name": "1.1.0",
+    "code": "100"
+  },
+  "description": "新房联动.营销平台 百万经纪人联合营销",
+  "launch_path": "__uniappview.html",
+  "developer": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "permissions": {
+    "VideoPlayer": {},
+    "Maps": {
+      "coordType": "gcj02"
+    },
+    "Messaging": {},
+    "LivePusher": {},
+    "Speech": {},
+    "UniNView": {
+      "description": "UniNView原生渲染"
+    }
+  },
+  "plus": {
+    "useragent": {
+      "value": "uni-app",
+      "concatenate": true
+    },
+    "splashscreen": {
+      "target": "id:1",
+      "autoclose": true,
+      "waiting": false,
+      "delay": 0
+    },
+    "popGesture": "close",
+    "launchwebview": {
+      "id": "1",
+      "kernel": "WKWebview",
+      "uni-app": "auto"
+    },
+    "statusbar": {
+      "immersed": "supportedDevice",
+      "style": "dark",
+      "background": "#FFFFFF"
+    },
+    "usingComponents": true,
+    "distribute": {
+      "icons": {
+        "ios": {
+          "iphone": {
+            "app@2x": "unpackage/res/icons/120x120.png",
+            "app@3x": "unpackage/res/icons/180x180.png",
+            "notification@2x": "unpackage/res/icons/40x40.png",
+            "notification@3x": "unpackage/res/icons/60x60.png",
+            "settings@2x": "unpackage/res/icons/58x58.png",
+            "settings@3x": "unpackage/res/icons/87x87.png",
+            "spotlight@2x": "unpackage/res/icons/80x80.png",
+            "spotlight@3x": "unpackage/res/icons/120x120.png"
+          },
+          "appstore": "unpackage/res/icons/1024x1024.png",
+          "ipad": {
+            "app": "unpackage/res/icons/76x76.png",
+            "app@2x": "unpackage/res/icons/152x152.png",
+            "notification": "unpackage/res/icons/20x20.png",
+            "notification@2x": "unpackage/res/icons/40x40.png",
+            "proapp@2x": "unpackage/res/icons/167x167.png",
+            "settings": "unpackage/res/icons/29x29.png",
+            "settings@2x": "unpackage/res/icons/58x58.png",
+            "spotlight": "unpackage/res/icons/40x40.png",
+            "spotlight@2x": "unpackage/res/icons/80x80.png"
+          }
+        },
+        "android": {
+          "hdpi": "unpackage/res/icons/72x72.png",
+          "xhdpi": "unpackage/res/icons/96x96.png",
+          "xxhdpi": "unpackage/res/icons/144x144.png",
+          "xxxhdpi": "unpackage/res/icons/192x192.png"
+        }
+      },
+      "splashscreen": {
+        "android": {
+          "hdpi": "",
+          "xhdpi": "",
+          "xxhdpi": ""
+        },
+        "ios": {
+          "iphone": {
+            "portrait-896h@3x": "",
+            "landscape-896h@3x": "",
+            "portrait-896h@2x": "",
+            "landscape-896h@2x": "",
+            "iphonex": "",
+            "iphonexl": "",
+            "retina55": "",
+            "retina55l": "",
+            "retina47l": "",
+            "retina47": "",
+            "retina40": "",
+            "retina40l": "",
+            "retina35": ""
+          }
+        }
+      },
+      "google": {
+        "permissions": [
+          "<uses-feature android:name=\"android.hardware.camera\"/>",
+          "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+          "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+          "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+          "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+          "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+          "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+          "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+          "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+          "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+          "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.READ_SMS\"/>",
+          "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+          "<uses-permission android:name=\"android.permission.SEND_SMS\"/>",
+          "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+          "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_SMS\"/>"
+        ]
+      },
+      "apple": {},
+      "plugins": {
+        "maps": {
+          "amap": {
+            "appkey_ios": "21c389c4660737588e133e49744088b3",
+            "appkey_android": "21c389c4660737588e133e49744088b3"
+          }
+        },
+        "share": {},
+        "oauth": {},
+        "payment": {},
+        "push": {},
+        "speech": {
+          "ifly": {}
+        },
+        "audio": {
+          "mp3": {
+            "description": "Android平台录音支持MP3格式文件"
+          }
+        }
+      }
+    },
+    "allowsInlineMediaPlayback": true,
+    "safearea": {
+      "background": "#ffffff",
+      "bottom": {
+        "offset": "auto"
+      }
+    },
+    "uni-app": {
+      "compilerVersion": "2.5.1",
+      "control": "v8",
+      "nvueCompiler": "uni-app",
+      "renderer": "auto",
+      "nvue": {
+        "flex-direction": "column"
+      }
+    },
+    "tabBar": {
+      "color": "#aeb7c2",
+      "selectedColor": "#40434e",
+      "backgroundColor": "#ffffff",
+      "borderStyle": "rgba(255,255,255,0.4)",
+      "position": "bottom",
+      "fontSize": "10px",
+      "iconWidth": "28px",
+      "spacing": "5px",
+      "height": "58px",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "首页",
+          "iconPath": "static/images/tabbar/home_default.png",
+          "selectedIconPath": "static/images/tabbar/home_active.png"
+        },
+        {
+          "pagePath": "pages/customIndex/customIndex",
+          "text": "客户",
+          "iconPath": "static/images/tabbar/custorm_default.png",
+          "selectedIconPath": "static/images/tabbar/custorm_active.png"
+        },
+        {
+          "pagePath": "pages/msgList/msgList",
+          "text": "消息",
+          "iconPath": "static/images/tabbar/msg_default.png",
+          "selectedIconPath": "static/images/tabbar/msg_active.png"
+        },
+        {
+          "pagePath": "pages/buildList/buildList",
+          "text": "楼盘",
+          "iconPath": "static/images/tabbar/build_default.png",
+          "selectedIconPath": "static/images/tabbar/build_active.png"
+        },
+        {
+          "pagePath": "pages/mine/mine",
+          "text": "我的",
+          "iconPath": "static/images/tabbar/my_default.png",
+          "selectedIconPath": "static/images/tabbar/my_active.png"
+        }
+      ],
+      "child": [
+        "lauchwebview"
+      ],
+      "selected": 0
+    }
+  }
+}

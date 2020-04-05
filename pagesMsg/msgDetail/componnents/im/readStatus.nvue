@@ -1,0 +1,37 @@
+<template>
+	<div class="read_view">
+		<text :class="[isRead ? 'textMe_read' : 'textMe_unread']">
+            {{ isRead ? "已读" : "未读"}}
+        </text>
+	</div>
+</template>
+
+<script>
+	export default {
+		props: {
+			isRead: {
+				type: Boolean,
+				default: false
+			},
+		},
+	}
+</script>
+
+<style scoped>
+	.read_view{
+		text-align: right;
+        word-break: keep-all;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: -20upx;
+	}
+	.textMe_unread{
+        font-size: 24upx;
+        color: #0084ff;
+	}
+	.textMe_read{
+        font-size: 24upx;
+        color: #D2D2D2;
+	}
+</style>

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "bounce": "none",
+  "softinputNavBar": "none",
+  "softinputMode": "adjustPan",
+  "animationType": "slide-out-bottom",
+  "usingComponents": {
+    "collect-form-id": "/components/collectFormId"
+  }
+}

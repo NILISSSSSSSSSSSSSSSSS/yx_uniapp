@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "collect-form-id": "/components/collectFormId",
+    "chart_line": "/pagesStatistics/analysis/components/components/chart_line",
+    "chart_column": "/pagesStatistics/analysis/components/components/chart_column",
+    "chart_layout": "/pagesStatistics/analysis/components/components/chart_layout",
+    "chart_shop": "/pagesStatistics/analysis/components/components/chart_shop",
+    "chart_percentage_band-rate": "/pagesStatistics/analysis/components/components/chart_percentage_bandRate",
+    "chart_percentage_sign": "/pagesStatistics/analysis/components/components/chart_percentage_sign",
+    "chart_percentage_report": "/pagesStatistics/analysis/components/components/chart_percentage_report",
+    "chart_percentage_commission": "/pagesStatistics/analysis/components/components/chart_percentage_commission"
+  }
+}

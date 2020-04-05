@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ei-calendar-item": "/components/ei-calendar/ei-calendar-item"
+  },
+  "component": true
+}

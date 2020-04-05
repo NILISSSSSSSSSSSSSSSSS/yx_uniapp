@@ -1,0 +1,149 @@
+
+.house-swiper.data-v-217b220e {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.swiper-view.data-v-217b220e {
+  position: relative;
+  width: 100%;
+  height: 510rpx;
+  background-image: url('http://cdn.haofang.net/static/xfldDeveloper/build/default-house-img.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.swiper-box.data-v-217b220e, .swiper-item.data-v-217b220e, .swiper-cont.data-v-217b220e, .swiper-img.data-v-217b220e {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+button.swiper-cont.data-v-217b220e {
+  border-radius: 0;
+  position: relative;
+}
+button.swiper-cont.data-v-217b220e::after {
+  border-radius: 0;
+}
+.swiper-vr.data-v-217b220e {
+  position: absolute;
+  width: 116rpx;
+  height: 116rpx;
+  border-radius: 100%;
+  background: rgba(0,0,0,0.35);
+  top: 50%;
+  left: 50%;
+  margin-top: -58rpx;
+  margin-left: -58rpx;
+  z-index: 20;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.swiper-vr>.vr-img.data-v-217b220e {
+  width: 100rpx;
+  height: 64rpx;
+}
+.swiper-desc.data-v-217b220e {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 102rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.swiper-desc>view.data-v-217b220e:nth-child(1) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.swiper-desc>view:nth-child(1)>view.data-v-217b220e {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  color: #ffffff;
+  font-size: 24rpx;
+  line-height: 1;
+}
+.swiper-desc>view.data-v-217b220e:nth-child(2) {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100rpx;
+          flex: 0 0 100rpx;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+}
+.swiper-desc>view:nth-child(2)>view.data-v-217b220e {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+  color: #ffffff;
+  font-size: 20rpx;
+}
+.look-more.data-v-217b220e {
+  position: absolute;
+  right: 28rpx;
+  bottom: 24rpx;
+  width: 136rpx;
+	height: 104rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+	background-color: rgba(255, 255, 255, 0.73);
+	border-radius: 8rpx;
+  color: #191f25;
+  font-family: PingFang-SC-Medium;
+	font-size: 22rpx;
+}
+
+

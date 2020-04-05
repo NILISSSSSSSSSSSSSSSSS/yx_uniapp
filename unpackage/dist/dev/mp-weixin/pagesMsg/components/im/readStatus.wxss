@@ -1,0 +1,16 @@
+
+.textMe_read_text.data-v-23aff264{
+		position: absolute;
+		bottom: -40rpx;
+		text-align: right;
+		right: 4rpx;
+		font-size: 24rpx;
+        word-break: keep-all;
+}
+.textMe_unread.data-v-23aff264{
+		color: #4DAAF0;
+}
+.textMe_read.data-v-23aff264{
+		color: #D2D2D2;
+}
+

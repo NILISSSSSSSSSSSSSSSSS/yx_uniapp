@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 1452727 */
+  src: url('https://at.alicdn.com/t/font_1452727_auwksg0526u.eot');
+  src: url('https://at.alicdn.com/t/font_1452727_auwksg0526u.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1452727_auwksg0526u.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1452727_auwksg0526u.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1452727_auwksg0526u.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1452727_auwksg0526u.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconuser:before {
+  content: "\e7ae";
+}
+
+.iconmobile:before {
+  content: "\e7b2";
+}
+
+.iconphone:before {
+  content: "\e7e3";
+}
+
+.iconright:before {
+  content: "\e7eb";
+}
+
+.iconleft:before {
+  content: "\e7ec";
+}
+
+.iconreturn:before {
+  content: "\e720";
+}
+
+text[class*="icon-"],
+view[class*="icon-"],
+button[class*="icon-"] {
+  font-family: "iconfont";
+  font-size: inherit;
+  font-style: normal;
+}
+

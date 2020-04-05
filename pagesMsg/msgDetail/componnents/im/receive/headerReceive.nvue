@@ -1,0 +1,39 @@
+<template>
+	<div class="head_view">
+		<image :autoBitmapRecycleAndroid="autoBitmapRecycleAndroid" class="head_img"
+			   resize="stretch" :src="headImg"></image>
+	</div>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				autoBitmapRecycleAndroid: false
+			}
+		},
+		props: {
+			headImg: {
+				type: String,
+				default: "http://cdn.haofang.net/static/uuminiapp/im/defaultHead.png?t=20180427"
+			},
+		},
+	}
+</script>
+
+<style scoped>
+	.head_view{
+		width: 80upx;
+		height: 80upx;
+		overflow:hidden;
+		flex-shrink: 0;
+		border-radius: 100%;
+		box-sizing: border-box;
+		border-width: 1upx;
+		border-color: #c0c0c0;
+	}
+	.head_img{
+		width: 80upx;
+		height: 80upx;
+	}
+</style>

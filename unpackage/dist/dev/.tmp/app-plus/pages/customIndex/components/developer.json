@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "collect-form-id": "/components/collectFormId",
+    "scroll-loading": "/components/scrollLoading",
+    "customer-list": "/components/customerList",
+    "no-data": "/components/noDataForCustomer",
+    "company-item": "/components/companyItem",
+    "commission-customer-list": "/components/commissionCustomerList"
+  }
+}

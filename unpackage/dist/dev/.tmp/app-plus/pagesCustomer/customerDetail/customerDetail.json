@@ -1,0 +1,12 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTitleText": "",
+  "softinputNavBar": "none",
+  "usingComponents": {
+    "show-modal": "/components/showModal",
+    "follow-list": "/pagesCustomer/components/followList",
+    "screen-customer": "/components/screenCustomer",
+    "screen-customer-of-direct-customer": "/components/screenCustomerOfDirectCustomer",
+    "scroll-loading": "/components/scrollLoading"
+  }
+}

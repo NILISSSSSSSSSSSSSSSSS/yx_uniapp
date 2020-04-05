@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "follow-list": "/pagesCustomer/components/followList",
+    "screen-customer": "/components/screenCustomer",
+    "screen-customer-of-direct-customer": "/components/screenCustomerOfDirectCustomer",
+    "scroll-loading": "/components/scrollLoading"
+  }
+}

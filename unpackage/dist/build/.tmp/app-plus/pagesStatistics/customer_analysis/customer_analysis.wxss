@@ -1,0 +1,32 @@
+.customs_analysis .header {
+  border-bottom: solid 1rpx #ebebeb;
+}
+.customs_analysis .header .tabs {
+  width: 316rpx;
+  margin: 0 auto 31rpx;
+}
+.customs_analysis .header .tabs .tabs_title {
+  font-family: PingFang-SC-Medium;
+  font-size: 32rpx;
+  color: #7d8184;
+  vertical-align: center;
+  margin-bottom: 19rpx;
+}
+.customs_analysis .header .tabs .tabs_title .tabs_title_active {
+  font-family: PingFang-SC-Bold;
+  font-size: 34rpx;
+  color: #191f25;
+}
+.customs_analysis .header .tabs .tabs_dots_list {
+  width: 90%;
+  margin: 0 auto;
+}
+.customs_analysis .header .tabs .tabs_dots_list .tabs_dots {
+  width: 43rpx;
+  height: 5rpx;
+  border-radius: 3rpx;
+}
+.customs_analysis .header .tabs .tabs_dots_list .dot_active {
+  background-color: #0084ff;
+}
+

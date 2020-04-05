@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f8a0d554-bf79-42f9-b338-4355ecc0019e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1XgbgSlum0Ut2SoSnckKht8YFIF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\小黑项目\yx_uniapp\model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\新房联动\uniapp-xpfx\yx_uniapp\utils" />
+      <recent name="D:\新房联动\uniapp-xpfx\yx_uniapp\common" />
+      <recent name="D:\新房联动\uniapp-xpfx\yx_uniapp\components" />
+      <recent name="D:\新房联动\uniapp-xpfx\yx_uniapp\pages\buildList\components" />
+      <recent name="D:\新房联动\uniapp-xpfx\yx_uniapp\pages\customIndex\components" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8a0d554-bf79-42f9-b338-4355ecc0019e" name="Default Changelist" comment="" />
+      <created>1572836655616</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572836655616</updated>
+      <workItem from="1572836656993" duration="4879000" />
+      <workItem from="1572916352805" duration="25536000" />
+      <workItem from="1573003072993" duration="37864000" />
+      <workItem from="1573089554775" duration="3902000" />
+      <workItem from="1573096387823" duration="27728000" />
+      <workItem from="1573176895581" duration="144000" />
+      <workItem from="1573179559921" duration="27224000" />
+      <workItem from="1573262317917" duration="25187000" />
+      <workItem from="1573433956302" duration="30435000" />
+      <workItem from="1573521545493" duration="29319000" />
+      <workItem from="1573608000220" duration="27261000" />
+      <workItem from="1573694167662" duration="29638000" />
+      <workItem from="1573780546688" duration="24425000" />
+      <workItem from="1574038111531" duration="28769000" />
+      <workItem from="1574126167316" duration="30835000" />
+      <workItem from="1574212809163" duration="17028000" />
+      <workItem from="1574299066897" duration="20086000" />
+      <workItem from="1574347383207" duration="26000" />
+      <workItem from="1574348388208" duration="68000" />
+      <workItem from="1574390483023" duration="9351000" />
+      <workItem from="1574472026224" duration="7291000" />
+      <workItem from="1574501616065" duration="70000" />
+      <workItem from="1574501691876" duration="2531000" />
+      <workItem from="1574504510061" duration="28000" />
+      <workItem from="1574647317385" duration="592000" />
+      <workItem from="1574649873618" duration="118000" />
+      <workItem from="1574650054820" duration="7000" />
+      <workItem from="1574732832875" duration="314000" />
+      <workItem from="1574762236043" duration="142000" />
+      <workItem from="1574762419086" duration="7000" />
+      <workItem from="1574764825589" duration="26000" />
+      <workItem from="1575282815633" duration="923000" />
+      <workItem from="1576036023678" duration="3046000" />
+      <workItem from="1576574966693" duration="7927000" />
+      <workItem from="1576635233952" duration="271000" />
+      <workItem from="1576720954364" duration="372000" />
+      <workItem from="1576926815104" duration="205000" />
+      <workItem from="1577156992954" duration="4917000" />
+      <workItem from="1577181785988" duration="3261000" />
+      <workItem from="1577236587788" duration="48000" />
+      <workItem from="1577259604490" duration="643000" />
+      <workItem from="1577263702291" duration="668000" />
+      <workItem from="1577266122114" duration="267000" />
+      <workItem from="1577266417655" duration="1391000" />
+      <workItem from="1577412614462" duration="9000" />
+      <workItem from="1577429657712" duration="37000" />
+      <workItem from="1577429809502" duration="5000" />
+      <workItem from="1578117403281" duration="268000" />
+      <workItem from="1578118451345" duration="104000" />
+      <workItem from="1578118627019" duration="56000" />
+      <workItem from="1578315253170" duration="33000" />
+      <workItem from="1578390891240" duration="38000" />
+      <workItem from="1578455232663" duration="424000" />
+      <workItem from="1578548710174" duration="1509000" />
+      <workItem from="1579060023486" duration="38000" />
+      <workItem from="1579156088628" duration="61000" />
+      <workItem from="1579507025937" duration="161000" />
+      <workItem from="1579576013398" duration="762000" />
+      <workItem from="1579664956764" duration="53000" />
+      <workItem from="1581470798940" duration="7276000" />
+      <workItem from="1581646899614" duration="86000" />
+      <workItem from="1581664752365" duration="35000" />
+      <workItem from="1581666389986" duration="1215000" />
+      <workItem from="1581668511053" duration="2352000" />
+      <workItem from="1581671666923" duration="25000" />
+      <workItem from="1581674628340" duration="535000" />
+      <workItem from="1581676581095" duration="1379000" />
+      <workItem from="1581736812790" duration="337000" />
+      <workItem from="1582121717571" duration="1426000" />
+      <workItem from="1582123513585" duration="841000" />
+      <workItem from="1582356720633" duration="21000" />
+      <workItem from="1582375600806" duration="13000" />
+      <workItem from="1584254933845" duration="1774000" />
+      <workItem from="1584256834655" duration="296000" />
+      <workItem from="1584257254182" duration="1783000" />
+      <workItem from="1584259339973" duration="10330000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="518" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584256243620">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="518" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1584256243620" />
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1582356740294">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582356740294" />
+    <state x="457" y="167" width="755" height="548" key="find.popup" timestamp="1584267066576">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="457" y="167" width="755" height="548" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1584267066576" />
+    <state x="425" y="66" width="670" height="676" key="search.everywhere.popup" timestamp="1584257893701">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="66" width="670" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1584257893701" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/utils/ImChart.js</url>
+          <line>907</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

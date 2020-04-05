@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "softinputNavBar": "none",
+  "usingComponents": {
+    "collect-form-id": "/components/collectFormId"
+  }
+}

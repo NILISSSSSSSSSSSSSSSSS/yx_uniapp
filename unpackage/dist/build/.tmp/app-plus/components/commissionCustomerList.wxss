@@ -1,0 +1,93 @@
+
+.no_data_info.data-v-614d1c34{
+    color: #666666;
+    font-size: 26rpx;
+    line-height: 28rpx;
+    text-align: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    margin-top: 30rpx;
+    margin-bottom: 50rpx;
+}
+.list_items.data-v-614d1c34{
+    height: 144rpx;
+    background-color: #ffffff;
+    box-shadow: 0px 9px 27px 0px
+    rgba(0, 0, 0, 0.05);
+    border-radius: 10rpx;
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+    margin-bottom: 30rpx;
+    box-sizing: border-box;
+}
+.list_items.data-v-614d1c34:last-child{
+    margin-bottom: 50rpx;
+}
+.commission_info.data-v-614d1c34{
+    margin-left: 40rpx;
+}
+.block_view.data-v-614d1c34{
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+    margin-right: 10rpx;
+}
+.name.data-v-614d1c34{
+    font-family: PingFang-SC-Bold;
+    font-size: 32rpx;
+    line-height: 40rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    margin: auto 20rpx auto 0;
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+    max-width: 128rpx;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.sex.data-v-614d1c34{
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    line-height: 40rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    margin: auto 20rpx auto 0;
+}
+.phone.data-v-614d1c34{
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    line-height: 40rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    margin: auto 20rpx auto 0;
+}
+.deal_info.data-v-614d1c34{
+    font-family: PingFang-SC-Medium;
+    font-size: 22rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 28rpx;
+    letter-spacing: 0rpx;
+    color: #a3a5a8;
+    margin-top: 20rpx;
+}
+.commission_unm.data-v-614d1c34{
+    font-family: 1234567890-Regular;
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+    margin-right: 40rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+}
+

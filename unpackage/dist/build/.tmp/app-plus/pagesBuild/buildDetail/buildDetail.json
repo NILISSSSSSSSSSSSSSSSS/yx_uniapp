@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "collect-form-id": "/components/collectFormId",
+    "house-swiper": "/components/houseDetail/houseSwiper"
+  }
+}

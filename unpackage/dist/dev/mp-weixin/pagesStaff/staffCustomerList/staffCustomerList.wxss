@@ -1,0 +1,210 @@
+
+page{
+    background: #f8f8f8;
+    width: 100%;
+    height: 100%;
+}
+.shu_line{
+    width: 2rpx;
+    height: 320rpx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
+.heng_line{
+    width: 550rpx;
+    height: 2rpx;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
+.empty_view{
+    width: 100%;
+    height: 50rpx;
+    background-color: #f8f8f8;
+}
+.box{
+    width: 100%;
+    height: 100%;
+}
+.top_item{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+}
+/*状态搜索相关样式 S*/
+.search_box{
+    width: 100%;
+    background: #FFFFFF;
+    z-index: 99;
+}
+.search_source_list{
+    position: fixed;
+    top: 89rpx;
+    left: 0;
+    overflow-y: auto;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    height: 100%;
+    z-index: 88;
+}
+.search_header{
+    border-bottom: solid 1px #F5F5F5;
+}
+.source_of_search{
+    margin-right: 260rpx;
+}
+.search_text{
+    font-size: 28rpx;
+    line-height: 90rpx;
+}
+.search_text_click{
+    color: #0084ff;
+}
+.search_icon_xia{
+    width: 14rpx;
+    height: 8rpx;
+    opacity: 0.3;
+    margin: auto auto auto 15rpx;
+}
+.search_icon_shang{
+    width: 14rpx;
+    height: 8rpx;
+    margin: auto auto auto 15rpx;
+}
+.menu{
+    -webkit-animation: menu .2s ease-in-out forwards;
+            animation: menu .2s ease-in-out forwards;
+}
+@-webkit-keyframes menu {
+0% {
+        top: -400px;
+}
+50% {
+        top: -200px;
+}
+100% {
+        top: 0;
+}
+}
+@keyframes menu {
+0% {
+        top: -400px;
+}
+50% {
+        top: -200px;
+}
+100% {
+        top: 0;
+}
+}
+@-webkit-keyframes showMark{
+0%{-webkit-transform: scale(1);transform: scale(1); background: rgba(0,0,0,0);}
+100%{-webkit-transform: scale(1);transform: scale(1); background: rgba(0,0,0,0.3);}
+}
+@keyframes showMark{
+0%{-webkit-transform: scale(1);transform: scale(1); background: rgba(0,0,0,0);}
+100%{-webkit-transform: scale(1);transform: scale(1); background: rgba(0,0,0,0.3);}
+}
+.show_mark{
+    -webkit-animation: showMark .2s ease-in-out forwards;
+            animation: showMark .2s ease-in-out forwards;
+}
+.search_source_scroll{
+    width: 100%;
+    background: #ffffff;
+    box-sizing: border-box;
+    position: relative;
+}
+.search_list_no_check:last-child{
+    border-bottom: none;
+}
+.search_list_no_check{
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #333333;
+    margin-left: 30rpx;
+    line-height: 90rpx;
+    border-bottom: 1px solid #F5F5F5;
+}
+.search_list_is_check{
+    color: #0084ff;
+}
+/*状态搜索相关样式 E*/
+/*列表相关样式*/
+.count_view{
+    padding: 10rpx 40rpx 30rpx 40rpx;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    position: relative;
+}
+.top_info_view{
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.top_info_item{
+    width: 100%;
+    height: 155rpx;
+    text-align: center;
+}
+.top_info_num{
+    font-size: 48rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: 62rpx;
+    height: 62rpx;
+    color: #191f25;
+}
+.top_info_text{
+    font-family: PingFang-SC-Medium;
+    font-size: 24rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 53rpx;
+    color: #7d8184;
+}
+.border-r-b{
+    border-right: solid 1px rgba(235, 235, 235, 0.3);
+    border-bottom:solid 1px rgba(235, 235, 235, 0.3)
+}
+.border-b{
+    border-bottom: solid 1px rgba(235, 235, 235, 0.3);
+}
+.border-r{
+    border-right: solid 1px rgba(235, 235, 235, 0.3);
+}
+.no_more_data {
+    height: 80rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 26rpx;
+    color: #666666;
+}
+.customer_list{
+    background-color: #ffffff;
+    box-shadow: 0 9rpx 27rpx 0
+    rgba(0, 0, 0, 0.05);
+    border-radius: 10rpx;
+    margin: 0 40rpx 20rpx 40rpx;
+    padding: 36rpx;
+    box-sizing: border-box;
+}
+.c_lits{
+    position: fixed;
+    top: 90rpx;
+    bottom: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+            flex: 1;
+    width: 100%;
+}
+

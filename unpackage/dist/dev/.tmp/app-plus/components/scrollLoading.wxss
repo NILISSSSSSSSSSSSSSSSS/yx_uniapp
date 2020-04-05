@@ -1,0 +1,54 @@
+
+.loading_view.data-v-4322e0ae{
+        -webkit-transform-origin: 0px 0px 0px;
+                transform-origin: 0px 0px 0px;
+        opacity: 1;
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+        height:40px;
+        line-height:40px;
+        font-size:12px;
+        text-align:center;
+}
+.pullUpIcon.data-v-4322e0ae{
+        display:inline-block;
+        height:15px;
+        width:15px;
+        border-radius:100%;
+		will-change: transform;
+        margin:auto 6px;
+        border:2px solid #666;
+        border-bottom-color:transparent;
+        vertical-align:middle;
+        -webkit-animation:loading-data-v-4322e0ae 1s linear infinite;
+                animation:loading-data-v-4322e0ae 1s linear infinite;
+}
+@-webkit-keyframes loading-data-v-4322e0ae {
+0% {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+}
+50% {
+            -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+}
+100% {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+}
+}
+@keyframes loading-data-v-4322e0ae {
+0% {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+}
+50% {
+            -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+}
+100% {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+}
+}
+

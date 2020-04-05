@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "员工管理",
+  "backgroundColor": "#f8f8f8",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "no-data": "/pagesStaff/components/noData"
+  }
+}

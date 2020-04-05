@@ -1,0 +1,377 @@
+
+.no_build_dt_view{
+    padding-top: 90rpx;
+    box-sizing: border-box;
+}
+.no_build_dt_img{
+    width: 374rpx;
+    height: 171rpx;
+    margin: 0 auto;
+}
+.no_build_dt_text{
+    width: 100%;
+    height: 30rpx;
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 30rpx;
+    color: #c0c1c3;
+    text-align: center;
+    margin: 49rpx auto 20rpx;
+}
+/*顶部*/
+.home_view{
+    width: 100%;
+    background-color: #ffffff;
+}
+.top_view{
+    width: 100%;
+    height: 400rpx;
+    background: url("http://cdn.haofang.net/static/xfldDeveloper/index/top_bg.png") center center no-repeat;
+    background-size: cover;
+}
+.logo_zy{
+    width: 419rpx;
+    height: 128rpx;
+    margin: 114rpx auto -50rpx 40rpx;
+}
+.top_num_view{
+    margin-top: 66rpx;
+    width: 670rpx;
+    height: 200rpx;
+    background-color: #ffffff;
+    box-shadow: 0 0 20rpx 0
+    rgba(0, 0, 0, 0.08);
+    border-radius: 20rpx;
+    margin-left: 40rpx;
+    position: relative;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.top_num_date{
+    margin: auto 0;
+    width: 176rpx;
+    height: 110rpx;
+    border-right: 1rpx solid #ebebeb;
+    box-sizing: border-box;
+    text-align: center;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+}
+.top_num_day{
+    font-family: 1234567890-Regular;
+    font-size: 70rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: 70rpx;
+    color: #aeb7c2;
+    text-align: center;
+}
+.top_num_month{
+    font-family: PingFang-SC-Medium;
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 26rpx;
+    color: #aeb7c2;
+}
+.top_num_cont{
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    padding: 0 16rpx 0 13rpx;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+            flex: 1;
+    margin: auto 0;
+}
+.top_num_item{
+    width: 157rpx;
+    height: 110rpx;
+    text-align: center;
+}
+.top_num_val{
+    font-size: 62rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: 62rpx;
+    height: 62rpx;
+    color: #191f25;
+}
+.top_num_text{
+    font-family: PingFang-SC-Medium;
+    font-size: 26rpx;
+    line-height: 26rpx;
+    color: #7d8184;
+}
+.build_name{
+    width: 246rpx;
+    height: 65rpx;
+    line-height: 58rpx;
+    text-align: center;
+    position: absolute;
+    right: -10rpx;
+    top: -30rpx;
+    z-index: 9;
+    background: url("http://cdn.haofang.net/static/xfldDeveloper/index/build_bg.png") center center no-repeat;
+    background-size: cover;
+    font-family: PingFang-SC-Bold;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #ffffff;
+}
+/*操作*/
+.cont_view{
+    padding: 0 40rpx;
+    box-sizing: border-box;
+    margin-top: 120rpx;
+}
+.to_btn_view{
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.to_btn_item{
+    width: 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    height: 150rpx;
+    border-radius: 14rpx;
+    background-blend-mode: normal,
+    normal;
+}
+.to_btn_item:first-child{
+    background-image: -webkit-linear-gradient(left,
+    #ffc43b 0%,
+    #fbb327 37%,
+    #f6a112 100%),
+    -webkit-linear-gradient(
+            #000000,
+            #000000);
+    background-image: linear-gradient(90deg,
+    #ffc43b 0%,
+    #fbb327 37%,
+    #f6a112 100%),
+    linear-gradient(
+            #000000,
+            #000000);
+    margin-right: 34rpx;
+}
+.to_btn_item:last-child{
+    background-image: -webkit-linear-gradient(left,
+    #8da7ff 0%,
+    #6d88fb 37%,
+    #4c68f7 100%),
+    -webkit-linear-gradient(
+            #000000,
+            #000000);
+    background-image: linear-gradient(90deg,
+    #8da7ff 0%,
+    #6d88fb 37%,
+    #4c68f7 100%),
+    linear-gradient(
+            #000000,
+            #000000);
+}
+.dengji_icon{
+    width: 50rpx;
+    height: 60rpx;
+    margin-right: 36rpx;
+}
+.scan_zy_icon{
+    width: 56rpx;
+    height: 56rpx;
+    margin-right: 36rpx;
+}
+.to_btn_text{
+    font-family: PingFang-SC-Bold;
+    font-size: 34rpx;
+    font-stretch: normal;
+    line-height: 34rpx;
+    color: #ffffff;
+    font-weight: bold;
+}
+/*客户跟进*/
+.custom_genjin{
+    width: 100%;
+    height: 120rpx;
+    background-color: #ffffff;
+    box-shadow: 0 0 28rpx 2rpx
+    rgba(224, 224, 224, 0.5);
+    border-radius: 10rpx;
+    margin-top: 50rpx;
+    padding: 0 30rpx 0 35rpx;
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.custom_genjin_left{
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.custom_genjin_right{
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.msg_genjin{
+    width: 35rpx;
+    height: 38rpx;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+    margin: auto 20rpx auto 0;
+}
+.custom_genjin_text{
+    font-family: PingFang-SC-Bold;
+    font-size: 30rpx;
+    font-stretch: normal;
+    color: #191f25;
+    font-weight: bold;
+    text-align: left;
+    max-width: 11em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.custom_genjin_time{
+    font-family: PingFang-SC-Medium;
+    font-size: 24rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #a3a5a8;
+    margin-left: 30rpx;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+    margin-right: 10rpx;
+}
+.custom_red_point{
+    width: 12rpx;
+    height: 12rpx;
+    background-color: #ff625b;
+    border-radius: 100%;
+    margin: auto 12rpx auto 0;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+}
+.more_arrow{
+    width: 12rpx;
+    height: 22rpx;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+    margin: auto 0;
+}
+/*楼盘动态*/
+.custom_zhl{
+    margin-top: 24rpx;
+}
+.custom_zhl_title{
+    line-height: 120rpx;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.custom_zhl_title>view{
+    font-family: PingFang-SC-Bold;
+    font-size: 38rpx;
+    font-weight: bold;
+    color: #191f25;
+}
+.custom_zhl_more{
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    font-weight: normal;
+    color: #a3a5a8;
+    margin-right: 20rpx;
+}
+.build_dt_cont{
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 0 28rpx 2rpx
+    rgba(224, 224, 224, 0.5);
+    border-radius: 10rpx;
+}
+.build_dt_item:last-child{
+    border-bottom: none;
+}
+.build_dt_item{
+    border-bottom: 1rpx solid #ebebeb;
+    padding: 40rpx 0 38rpx 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+.empty_view{
+    height: 60rpx;
+    width: 100%;
+}
+.build_dt_title{
+    font-family: PingFang-SC-Bold;
+    font-size: 32rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    color: #191f25;
+    text-align: left;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 28rpx;
+}
+.build_dt_content{
+    font-family: PingFang-SC-Medium;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 37rpx;
+    color: #7d8184;
+    text-align: left;
+    width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    box-orient:vertical;
+    line-clamp:2;
+}
+.build_dt_time{
+    margin-top: 25rpx;
+    font-family: PingFang-SC-Medium;
+    font-size: 24rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    color: #a3a5a8;
+}
+.build_dt_img_view{
+    width: 210rpx;
+    height: 172rpx;
+    background-color: #ffffff;
+    border-radius: 4rpx;
+    overflow: hidden;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+    background: url("http://cdn.haofang.net/static/xfldDeveloper/build/default-house-img.png") center center no-repeat;
+    background-size: cover;
+}
+.build_dt_img_view>image{
+    width: 100%;
+    height: 100%;
+}
+.build_dt_info{
+    padding-right: 30rpx;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+            flex: 1;
+    width: calc(100% - 220rpx);
+}
+

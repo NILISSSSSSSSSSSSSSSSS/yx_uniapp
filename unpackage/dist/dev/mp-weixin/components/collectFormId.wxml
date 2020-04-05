@@ -1,0 +1,1 @@
+<form class="collect-form-id " report-submit="true" data-event-opts="{{[['submit',[['formSubmit',['$event']]]]]}}" bindsubmit="__e"><button formType="submit"></button></form>

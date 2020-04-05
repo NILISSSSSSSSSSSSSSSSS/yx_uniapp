@@ -1,0 +1,1 @@
+<view class="loading_view f_r_c data-v-2f5b2bc6"><view class="pullUpIcon data-v-2f5b2bc6"></view><view class="pullUpLabel data-v-2f5b2bc6">{{text}}</view></view>

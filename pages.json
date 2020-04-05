@@ -1,0 +1,778 @@
+{
+    "pages" : [
+        {
+            "path" : "pages/index/index",
+            "style" : {
+                "navigationBarTitleText" : "",
+                "navigationStyle":"custom",
+                "app-plus" : {
+                    "titleView":false,
+                    "scrollIndicator" : "none",
+                    "softinputNavBar" : "none",
+                    "bounce" : "none"
+                }
+            }
+        },
+        {
+            "path" : "pages/customIndex/customIndex",
+            "style" : {
+                "navigationBarTitleText" : "",
+                "navigationStyle":"custom",
+                "app-plus" : {
+                    "titleView":false,
+                    "scrollIndicator" : "none",
+                    "softinputNavBar" : "none",
+                    "bounce" : "none"
+                }
+            }
+        },
+        {
+            "path" : "pages/msgList/msgList",
+            "style" : {
+                "navigationBarTitleText" : "",
+                "navigationStyle":"custom",
+                "app-plus" : {
+                    "titleView":false,
+                    "scrollIndicator" : "none",
+                    "softinputNavBar" : "none",
+                    "bounce" : "none"
+                }
+            }
+        },
+        {
+            "path" : "pages/buildList/buildList",
+            "style" : {
+                "navigationBarTitleText" : "",
+                "navigationStyle":"custom",
+                "app-plus" : {
+                    "titleView":false,
+                    "scrollIndicator" : "none",
+                    "softinputNavBar" : "none",
+                    "bounce" : "none"
+                }
+            }
+        },
+        {
+            "path" : "pages/mine/mine",
+            "style" : {
+                "navigationBarTitleText" : "",
+                "navigationStyle":"custom",
+                "app-plus" : {
+                    "titleView":false,
+                    "scrollIndicator" : "none",
+                    "softinputNavBar" : "none",
+                    "bounce" : "none"
+                }
+            }
+        }
+    ],
+    // #ifdef MP
+    "permission" : {
+        "scope.userLocation" : {
+            "desc" : "允许获取我的位置，看更多附近精准好房！"
+        }
+    },
+    // #endif
+    "globalStyle" : {
+        "navigationBarTextStyle" : "black",
+        "navigationBarTitleText" : "",
+        "navigationBarBackgroundColor" : "#FFFFFF",
+        "backgroundColor" : "#FFFFFF",
+        "app-plus" : {
+            "softinputNavBar" : "none",
+            "scrollIndicator" : "none"
+        }
+    },
+    "tabBar": {
+        "color" : "#aeb7c2",
+        "selectedColor" : "#40434e",
+        "backgroundColor" : "#ffffff",
+        "borderStyle" : "white",
+        "position" : "bottom",
+        "fontSize" : "10px",
+        "iconWidth": "28px",
+        "spacing" : "5px",
+        "height" : "58px",
+        "list" : [
+            {
+                "pagePath" : "pages/index/index",
+                "text" : "首页",
+                "iconPath" : "static/images/tabbar/home_default.png",
+                "selectedIconPath" : "static/images/tabbar/home_active.png"
+            },
+            {
+                "pagePath" : "pages/customIndex/customIndex",
+                "text" : "客户",
+                "iconPath" : "static/images/tabbar/custorm_default.png",
+                "selectedIconPath" : "static/images/tabbar/custorm_active.png"
+            },
+            {
+                "pagePath" : "pages/msgList/msgList",
+                "text" : "消息",
+                "iconPath" : "static/images/tabbar/msg_default.png",
+                "selectedIconPath" : "static/images/tabbar/msg_active.png"
+            },
+            {
+                "pagePath" : "pages/buildList/buildList",
+                "text" : "楼盘",
+                "iconPath" : "static/images/tabbar/build_default.png",
+                "selectedIconPath" : "static/images/tabbar/build_active.png"
+            },
+            {
+                "pagePath" : "pages/mine/mine",
+                "text" : "我的",
+                "iconPath" : "static/images/tabbar/my_default.png",
+                "selectedIconPath" : "static/images/tabbar/my_active.png"
+            }
+        ]
+    },
+    "subPackages" : [
+        {
+            "root": "pagesMsg",
+            "pages": [
+                {
+                    "path" : "contacts/contacts",
+                    "style" : {
+                        "navigationBarTitleText" : "通讯录",
+                        "bounce" : "none",
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "scrollIndicator" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "msgDetail/msgDetail",
+                    "style" : {
+                        "navigationBarTitleText" : "",
+                        "navigationStyle":"custom",
+                        "backgroundColor" : "#f8f8f8",
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "scrollIndicator" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "remindMsg/remindMsg",
+                    "style" : {
+                        "navigationBarTitleText" : "动态提醒",
+                        "bounce" : "none",
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "scrollIndicator" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "systemMsg/systemMsg",
+                    "style" : {
+                        "navigationBarTitleText" : "系统消息",
+                        "bounce" : "none",
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "scrollIndicator" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "msgDetail/videoChart",
+                    "style" : {
+                        "navigationBarTitleText" : "视频聊天",
+                        "bounce" : "none",
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "scrollIndicator" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "msgDetail/audioChart",
+                    "style" : {
+                        "navigationBarTitleText" : "视频聊天",
+                        "bounce" : "none",
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "scrollIndicator" : "none"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "root": "pagesSet",
+            "pages": [
+                {
+                    "path" : "aboutUs/aboutUs",
+                    "style" : {
+                        "navigationBarTitleText" : "关于我们",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "forgetPassword/forgetPassword",
+                    "style" : {
+                        "navigationBarTitleText" : "",
+                        "navigationBarBackgroundColor": "#ffffff",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "resetPassword/resetPassword",
+                    "style" : {
+                        "navigationBarTitleText" : "",
+                        "navigationBarBackgroundColor": "#ffffff",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "changePassword/changePassword",
+                    "style" : {
+                        "navigationBarTitleText" : "修改密码",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "login/login",
+                    "style" : {
+                        "navigationBarTitleText" : "",
+                        "navigationStyle":"custom",
+                        "bounce" : "none",
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "softinputMode" : "adjustPan",
+                            "animationType": "slide-out-bottom"
+                        }
+                    }
+                },
+                {
+                    "path" : "personalCenter/personalCenter",
+                    "style" : {
+                        "navigationBarTitleText" : "个人中心",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "setPage/setPage",
+                    "style" : {
+                        "navigationBarTitleText" : "设置",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "setPage/setPageAdviser",
+                    "style" : {
+                        "navigationBarTitleText" : "设置",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "changePayPassword/changePayPassword",
+                    "style" : {
+                        "navigationBarTitleText" : "",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "root": "pagesTool",
+            "pages": [
+                {
+                    "path" : "map/nearInfoMap",
+                    "style" : {
+                        "navigationBarTitleText" : "位置及周边"
+                    }
+                },
+                {
+                    "path" : "chooseDate/chooseWeek",
+                    "style" : {
+                        "navigationBarTitleText" : "选择时间"
+                    }
+                },
+                {
+                    "path" : "chooseDate/chooseYear",
+                    "style" : {
+                        "navigationBarTitleText" : "选择时间"
+                    }
+                },
+                {
+                    "path" : "chooseDate/chooseDay",
+                    "style" : {
+                        "navigationBarTitleText" : "选择时间"
+                    }
+                },
+                {
+                    "path" : "livePlayer/livePlayer",
+                    "style" : {
+                        "navigationBarTitleText" : "直播拉流"
+                    }
+                }
+            ]
+        },
+        {
+          "root": "pagesStatistics",
+          "pages": [
+                    {
+                        "path": "analysis/analysis",
+                        "style" : {
+                            "navigationBarTitleText" : ""
+                        }
+
+                    }
+                ]
+        },
+        {
+            "root": "pagesStaff",
+            "pages": [
+                {
+                    "path": "staffList/staffList",
+                    "style" : {
+                        "navigationBarTitleText" : "员工管理",
+                        "backgroundColor" : "#f8f8f8",
+                        "backgroundTextStyle" : "light"
+                    }
+                },
+                {
+                    "path": "addStaff/addStaff",
+                    "style" : {
+                        "navigationBarTitleText" : "添加员工"
+                    }
+                },
+                {
+                    "path": "staffCustomerList/staffCustomerList",
+                    "style" : {
+                        "navigationBarTitleText" : ""
+                    }
+                },
+                {
+                    "path": "customerTransfer/chooseCustomer",
+                    "style" : {
+                        "navigationBarTitleText" : "选择客户"
+                    }
+                },
+                {
+                    "path": "customerTransfer/chooseStaff",
+                    "style" : {
+                        "navigationBarTitleText" : "选择员工"
+                    }
+                }
+            ]
+        },
+        {
+            "root": "pagesCustomer",
+            "pages": [
+                {
+                    "path" : "customerList/customerList",
+                    "style" : {
+                        "navigationBarTitleText" : "",
+                        "enablePullDownRefresh" : true,
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "titleNView" : {
+                                "buttons" : [
+                                    {
+                                        "text": "\ue61a",
+                                        "fontSrc": "/static/app-plus/iconfont_customer.ttf",
+                                        "fontSize": "22px",
+                                        "float": "right",
+                                        "id":"add"
+                                    },
+                                    {
+                                        "text": "\ue63a",
+                                        "fontSrc": "/static/app-plus/iconfont_customer.ttf",
+                                        "fontSize": "22px",
+                                        "float": "right",
+                                        "id":"customer"
+                                    }
+                                ],
+                                "searchInput" : {
+                                    "autoFocus" : false,
+                                    "align" : "center",
+                                    "backgroundColor" : "#f4f4f4",
+                                    "borderRadius" : "6px",
+                                    "placeholder" : "请输入客户名字",
+                                    "placeholderColor" : "#bbbbbb"
+                                }
+                            },
+                            "pullToRefresh" : {
+                                "support" : true,
+                                "color" : "#3396fb",
+                                "style" : "circle",
+                                "offset" : "30px"
+                            },
+                            "scrollIndicator" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "newCustomer/newCustomer",
+                    "style" : {
+                        "enablePullDownRefresh" : true,
+                        "navigationBarTitleText" : "新客户",
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "titleNView" : {
+                                "buttons" : [
+                                    {
+                                        "text": "\ue61a",
+                                        "fontSrc": "/static/app-plus/iconfont_customer.ttf",
+                                        "fontSize": "22px",
+                                        "float": "right",
+                                        "id":"add"
+                                    }
+                                ]
+                            },
+                            "pullToRefresh" : {
+                                "support" : true,
+                                "color" : "#3396fb",
+                                "style" : "circle",
+                                "offset" : "30px"
+                            },
+                            "scrollIndicator" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "arriveVisit/arriveVisit",
+                    "style" : {
+                        "navigationBarTitleText" : "已到访",
+                        "enablePullDownRefresh" : true,
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "titleNView" : {
+                                "buttons" : [
+                                    {
+                                        "text": "\ue61a",
+                                        "fontSrc": "/static/app-plus/iconfont_customer.ttf",
+                                        "fontSize": "22px",
+                                        "float": "right",
+                                        "id":"add"
+                                    }
+                                ]
+                            },
+                            "pullToRefresh" : {
+                                "support" : true,
+                                "color" : "#3396fb",
+                                "style" : "circle",
+                                "offset" : "30px"
+                            }
+                        }
+                    }
+                },
+                {
+                    "path" : "waitCommission/waitCommission",
+                    "style" : {
+                        "enablePullDownRefresh" : true,
+                        "navigationBarTitleText" : "待结佣",
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "pullToRefresh" : {
+                                "support" : true,
+                                "color" : "#3396fb",
+                                "style" : "circle",
+                                "offset" : "30px"
+                            }
+                        }
+                    }
+                },
+                {
+                    "path" : "customerDetail/customerDetail",
+                    "style" : {
+                        "navigationBarBackgroundColor": "#FFFFFF",
+                        "navigationBarTitleText" : "",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "archiveManage/archiveManage",
+                    "style" : {
+                        "navigationBarBackgroundColor": "#ffffff",
+                        "navigationBarTitleText" : "经纪人管理",
+                        "enablePullDownRefresh" : true,
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "pullToRefresh" : {
+                                "support" : true,
+                                "color" : "#3396fb",
+                                "style" : "circle",
+                                "offset" : "30px"
+                            }
+                        }
+                    }
+                },
+                {
+                    "path" : "writeFollow/writeFollow",
+                    "style" : {
+                        "navigationBarTitleText" : "添加跟进",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "customerRegistration/customerRegistration",
+                    "style" : {
+                        "navigationBarTitleText" : "直客登记",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "upDaiKanQueRenShu/upDaiKanQueRenShu",
+                    "style" : {
+                        "navigationBarTitleText" : "带看确认书",
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "titleNView" : {
+                                "buttons" : [
+                                    {
+                                        "text": "\ue658",
+                                        "fontSrc": "/static/app-plus/iconfont_customer.ttf",
+                                        "fontSize": "0",
+                                        "float": "right",
+                                        "id":"del"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "path" : "archiveCustomerList/archiveCustomerList",
+                    "style" : {
+                        "enablePullDownRefresh" : true,
+                        "navigationBarTitleText" : "",
+                        "app-plus" : {
+                            "softinputNavBar" : "none",
+                            "pullToRefresh" : {
+                                "support" : true,
+                                "color" : "#3396fb",
+                                "style" : "circle",
+                                "offset" : "30px"
+                            }
+                        }
+                    }
+                },
+                {
+                    "path" : "subscriptionInfo/subscriptionInfo",
+                    "style" : {
+                        "navigationBarTitleText" : "认购信息",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "signInfo/signInfo",
+                    "style" : {
+                        "navigationBarTitleText" : "签约信息",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "applyRenGou/applyRenGou",
+                    "style" : {
+                        "navigationBarTitleText" : "认购信息",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "root": "pagesBuild",
+            "pages": [
+                {
+                    "path": "addEditBuilding/addEditBuildingFirst",
+                    "style" : {
+                        "navigationBarTitleText" : ""
+                    }
+                },
+                {
+                    "path": "addEditBuilding/addEditBuildingSecond",
+                    "style" : {
+                        "navigationBarTitleText" : "",
+                        "disableScroll" : true
+                    }
+                },
+                {
+                    "path": "buildDetail/buildDetail",
+                    "style" : {
+                        "navigationBarTitleText" : ""
+                    }
+                },
+                {
+                    "path" : "buildDetail/information",
+                    "style" : {
+                        "navigationBarTitleText" : "楼盘详情"
+                    }
+                },
+                {
+                    "path" : "buildDetail/pageRules",
+                    "style" : {
+                        "navigationBarTitleText" : "佣金方案",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "buildDetail/vrPage",
+                    "style" : {
+                        "navigationBarTitleText" : "全景展示",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "buildDetail/photoList",
+                    "style" : {
+                        "navigationBarTitleText" : "楼盘相册",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "buildDetail/photoListSwiper",
+                    "style" : {
+                        "navigationBarTitleText" : "",
+                        "navigationStyle": "custom",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "buildDetail/distributionDynamic",
+                    "style" : {
+                        "navigationBarTitleText" : "楼盘动态",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "buildDetail/distributionDynamicDetail",
+                    "style" : {
+                        "navigationBarTitleText" : "楼盘动态详情",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "buildDetail/releaseTheStory",
+                    "style" : {
+                        "navigationBarTitleText" : "发布动态",
+                        "disableScroll" : true,
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "buildDetail/skillPointList",
+                    "style" : {
+                        "navigationBarTitleText" : "",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "buildDetail/skillPointDetail",
+                    "style" : {
+                        "navigationBarTitleText" : "",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "buildDetail/distributionType",
+                    "style" : {
+                        "navigationBarTitleText" : "分销户型",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "buildDetail/addEditDistributionType",
+                    "style" : {
+                        "navigationBarTitleText" : "",
+                        "disableScroll" : true,
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "buildDetail/rulesCooperationEdit",
+                    "style" : {
+                        "navigationBarTitleText" : "编辑合作规则",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "buildDetail/commissionRuleEdit",
+                    "style" : {
+                        "navigationBarTitleText" : "编辑佣金规则",
+                        "disableScroll" : true,
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                },
+                {
+                    "path" : "buildDetail/precautionEdit",
+                    "style" : {
+                        "navigationBarTitleText" : "编辑注意事项",
+                        "app-plus" : {
+                            "softinputNavBar" : "none"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+          "root": "pagesStatistics",
+          "pages": [
+                {
+                    "path": "customer_analysis/customer_analysis",
+                    "style" : {
+                        "navigationBarTitleText" : ""
+                    }
+
+                }
+            ]
+        }
+    ]
+}

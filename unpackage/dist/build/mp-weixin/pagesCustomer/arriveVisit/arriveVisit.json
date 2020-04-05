@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "已到访",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "scroll-loading": "/components/scrollLoading",
+    "screen-customer": "/components/screenCustomer",
+    "screen-customer-of-direct-customer": "/components/screenCustomerOfDirectCustomer",
+    "no-data": "/components/noData"
+  }
+}

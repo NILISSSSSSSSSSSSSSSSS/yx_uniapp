@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "content": "/pages/buildList/components/content/content"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "backgroundColor": "#f8f8f8",
+  "usingComponents": {
+    "img-receive-view": "/pagesMsg/components/im/receive/imgReceiveView",
+    "text-receive-view": "/pagesMsg/components/im/receive/textReceiveView",
+    "voice-receive-view": "/pagesMsg/components/im/receive/voiceReceiveView",
+    "position-receive-view": "/pagesMsg/components/im/receive/positionReceiveView",
+    "video-receive-view": "/pagesMsg/components/im/receive/videoReceiveView",
+    "text-me-view": "/pagesMsg/components/im/me/textMeView",
+    "voice-me-view": "/pagesMsg/components/im/me/voiceMeView",
+    "img-me-view": "/pagesMsg/components/im/me/imgMeView",
+    "video-me-view": "/pagesMsg/components/im/me/videoMeView",
+    "position-me-view": "/pagesMsg/components/im/me/positionMeView",
+    "head-view": "/pagesMsg/components/im/headView",
+    "send-msg": "/pagesMsg/components/im/sendMsg",
+    "scroll-loading": "/components/scrollLoading",
+    "show-modal": "/components/showModal"
+  }
+}

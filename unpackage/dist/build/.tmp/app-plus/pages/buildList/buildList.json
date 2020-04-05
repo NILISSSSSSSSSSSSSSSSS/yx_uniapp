@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "titleView": false,
+  "scrollIndicator": "none",
+  "softinputNavBar": "none",
+  "bounce": "none",
+  "usingComponents": {
+    "developer": "/pages/buildList/components/buildList",
+    "adviser": "/pages/buildList/components/adviserTj"
+  }
+}

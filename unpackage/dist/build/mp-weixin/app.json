@@ -1,0 +1,167 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/customIndex/customIndex",
+    "pages/msgList/msgList",
+    "pages/buildList/buildList",
+    "pages/mine/mine"
+  ],
+  "subPackages": [
+    {
+      "root": "pagesMsg",
+      "pages": [
+        "contacts/contacts",
+        "msgDetail/msgDetail",
+        "remindMsg/remindMsg",
+        "systemMsg/systemMsg"
+      ]
+    },
+    {
+      "root": "pagesSet",
+      "pages": [
+        "aboutUs/aboutUs",
+        "forgetPassword/forgetPassword",
+        "resetPassword/resetPassword",
+        "changePassword/changePassword",
+        "login/login",
+        "personalCenter/personalCenter",
+        "setPage/setPage",
+        "setPage/setPageAdviser",
+        "changePayPassword/changePayPassword"
+      ]
+    },
+    {
+      "root": "pagesTool",
+      "pages": [
+        "map/nearInfoMap",
+        "chooseDate/chooseWeek",
+        "chooseDate/chooseYear",
+        "chooseDate/chooseDay"
+      ]
+    },
+    {
+      "root": "pagesStatistics",
+      "pages": [
+        "analysis/analysis",
+        "customer_analysis/customer_analysis"
+      ]
+    },
+    {
+      "root": "pagesStaff",
+      "pages": [
+        "staffList/staffList",
+        "addStaff/addStaff",
+        "staffCustomerList/staffCustomerList",
+        "customerTransfer/chooseCustomer",
+        "customerTransfer/chooseStaff"
+      ]
+    },
+    {
+      "root": "pagesCustomer",
+      "pages": [
+        "customerList/customerList",
+        "newCustomer/newCustomer",
+        "arriveVisit/arriveVisit",
+        "waitCommission/waitCommission",
+        "customerDetail/customerDetail",
+        "archiveManage/archiveManage",
+        "writeFollow/writeFollow",
+        "customerRegistration/customerRegistration",
+        "upDaiKanQueRenShu/upDaiKanQueRenShu",
+        "archiveCustomerList/archiveCustomerList",
+        "subscriptionInfo/subscriptionInfo",
+        "signInfo/signInfo",
+        "applyRenGou/applyRenGou"
+      ]
+    },
+    {
+      "root": "pagesBuild",
+      "pages": [
+        "addEditBuilding/addEditBuildingFirst",
+        "addEditBuilding/addEditBuildingSecond",
+        "buildDetail/buildDetail",
+        "buildDetail/information",
+        "buildDetail/pageRules",
+        "buildDetail/vrPage",
+        "buildDetail/photoList",
+        "buildDetail/photoListSwiper",
+        "buildDetail/distributionDynamic",
+        "buildDetail/distributionDynamicDetail",
+        "buildDetail/releaseTheStory",
+        "buildDetail/skillPointList",
+        "buildDetail/skillPointDetail",
+        "buildDetail/distributionType",
+        "buildDetail/addEditDistributionType",
+        "buildDetail/rulesCooperationEdit",
+        "buildDetail/commissionRuleEdit",
+        "buildDetail/precautionEdit"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#aeb7c2",
+    "selectedColor": "#40434e",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "position": "bottom",
+    "fontSize": "10px",
+    "iconWidth": "28px",
+    "spacing": "5px",
+    "height": "58px",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/tabbar/home_default.png",
+        "selectedIconPath": "static/images/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/customIndex/customIndex",
+        "text": "客户",
+        "iconPath": "static/images/tabbar/custorm_default.png",
+        "selectedIconPath": "static/images/tabbar/custorm_active.png"
+      },
+      {
+        "pagePath": "pages/msgList/msgList",
+        "text": "消息",
+        "iconPath": "static/images/tabbar/msg_default.png",
+        "selectedIconPath": "static/images/tabbar/msg_active.png"
+      },
+      {
+        "pagePath": "pages/buildList/buildList",
+        "text": "楼盘",
+        "iconPath": "static/images/tabbar/build_default.png",
+        "selectedIconPath": "static/images/tabbar/build_active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/images/tabbar/my_default.png",
+        "selectedIconPath": "static/images/tabbar/my_active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 30000,
+    "connectSocket": 30000,
+    "uploadFile": 30000,
+    "downloadFile": 30000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "允许获取我的位置，看更多附近精准好房！"
+    }
+  },
+  "usingComponents": {
+    "collect-form-id": "/components/collectFormId",
+    "scroll-loading": "/components/scrollLoading",
+    "show-modal": "/components/showModal"
+  },
+  "sitemapLocation": "sitemap.json"
+}

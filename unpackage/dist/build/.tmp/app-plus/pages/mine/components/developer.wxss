@@ -1,0 +1,96 @@
+
+pages{
+    width: 100%;
+    height: 100%;
+}
+.mine_view{
+    padding: 20rpx 40rpx 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+.title_view{
+    height: var(--status-bar-height);
+    width: 100%;
+}
+.me_title{
+    font-family: PingFang-SC-Bold;
+    font-size: 48rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: 134rpx;
+    color: #191f25;
+}
+.top_cont{
+    height: 340rpx;
+    width: 100%;
+    border-radius: 30rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: url("http://cdn.haofang.net/static/xfldDeveloper/mine/top_bg.png") center center no-repeat;
+    background-size: cover;
+    padding-top: 35rpx;
+}
+.build_name{
+    line-height: 110rpx;
+    height: 110rpx;
+    font-family: PingFang-SC-Bold;
+    font-size: 44rpx;
+    font-stretch: normal;
+    font-weight: bold;
+    color: #ffffff;
+    padding-left: 60rpx;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.top_info_view{
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    margin-top: 17rpx;
+}
+.top_info_item{
+    width: 100%;
+    height: 155rpx;
+    text-align: center;
+}
+.top_info_num{
+    font-size: 56rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: 62rpx;
+    height: 62rpx;
+    color: #ffffff;
+}
+.top_info_text{
+    font-family: PingFang-SC-Medium;
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 53rpx;
+    color: #ffffff;
+}
+.btn_view{
+    line-height: 120rpx;
+    border-bottom: 1rpx solid #ebebeb;
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.btn_text{
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    color: #191f25;
+}
+.arrow_right{
+    width: 15rpx;
+    height: 28rpx;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+    margin: auto 0;
+}
+

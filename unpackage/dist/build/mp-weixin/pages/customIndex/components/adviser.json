@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "customer-list": "/components/customerList",
+    "no-data": "/components/noDataForCustomer",
+    "company-item": "/components/companyItem",
+    "commission-customer-list": "/components/commissionCustomerList",
+    "scroll-loading": "/components/scrollLoading"
+  },
+  "component": true
+}

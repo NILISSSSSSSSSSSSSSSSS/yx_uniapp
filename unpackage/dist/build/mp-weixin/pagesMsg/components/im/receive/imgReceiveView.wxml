@@ -1,0 +1,1 @@
+<view class="img_view data-v-3fdb3efd"><view data-event-opts="{{[['tap',[['lookMaxImg',['$0'],['item']]]]]}}" class="imgMeView data-v-3fdb3efd" catchtap="__e"><image class="imgMeView_src data-v-3fdb3efd" style="{{'width:'+(imgSizeInfo.width/2+'px')+';'+('height:'+(imgSizeInfo.height/2+'px')+';')}}" mode="widthFix" lazy-load="true" src="{{imgSrc}}"></image></view></view>

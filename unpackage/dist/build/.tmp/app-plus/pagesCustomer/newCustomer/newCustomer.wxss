@@ -1,0 +1,99 @@
+
+page{
+    background-color: #FFFFFF;
+}
+.box{
+    background-color: #FFFFFF;
+}
+.null_view{
+    width: 100%;
+    height: 25rpx;
+    background-color: #f6f6f6;
+}
+.top_item{
+    padding-top: 40rpx;
+    padding-bottom: 30rpx;
+    margin-right: 28rpx;
+    margin-left: 28rpx;
+    /*border-bottom: 1px solid #ededed;*/
+}
+.customer_name{
+    margin: auto 10rpx auto 0rpx;
+    font-size: 32rpx;
+    letter-spacing: 0rpx;
+    color: #333333;
+}
+.customer_sex{
+    margin: auto 20rpx auto 0rpx;
+    width: 20rpx;
+    height: 20rpx;
+}
+.customer_phone{
+    margin: auto 10rpx auto 0rpx;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #3396fb;
+}
+.customer_phone_else{
+    margin: auto 10rpx auto 0rpx;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+}
+.customer_phone_logo{
+    margin: auto 20rpx auto 0rpx;
+    width: 25rpx;
+    height: 24rpx;
+}
+.customer_type{
+    margin: auto 0rpx auto auto;
+    width: 60rpx;
+    height: 30rpx;
+}
+.xuqiu_item{
+    margin-top: 10rpx;
+}
+.price{
+    margin-right: 10rpx;
+}
+.price>text{
+    font-size: 18rpx;
+    background-color: #edfbfc;
+    border-radius: 6rpx;
+    letter-spacing: 0rpx;
+    color: #40acb9;
+    padding: 8rpx;
+    margin: auto;
+}
+.room{
+    margin-right: 10rpx;
+    color: #42a77f;
+}
+.room>text{
+    font-size: 18rpx;
+    background-color: #e2f5ef;
+    border-radius: 6rpx;
+    letter-spacing: 0rpx;
+    padding: 8rpx;
+    margin: auto;
+}
+.pay_method>text{
+    font-size: 18rpx;
+    background-color: #ffece6;
+    border-radius: 6rpx;
+    letter-spacing: 0rpx;
+    color: #ff8063;
+    padding: 8rpx;
+    margin: auto;
+}
+.no_more_data {
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 26rpx;
+    color: #666666;
+}
+

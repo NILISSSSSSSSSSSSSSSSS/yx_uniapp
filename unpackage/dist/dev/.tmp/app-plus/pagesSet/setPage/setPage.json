@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "设置",
+  "softinputNavBar": "none",
+  "usingComponents": {
+    "collect-form-id": "/components/collectFormId",
+    "show-modal": "/components/showModal"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "位置及周边",
+  "usingComponents": {
+    "map-btn-view": "/components/houseDetail/mapBtnView"
+  }
+}

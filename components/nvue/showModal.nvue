@@ -1,0 +1,244 @@
+
+
+<template>
+    <div ref="mask" v-if="visible" class="module_mask" @click="hide" @touchmove.stop.prevent=""
+          :class="[visible ? 'show_mark' : '']">
+        <div ref="cont" class="module" :class="[visible ? 'show' : '']">
+            <text class="title" v-if="obj.title">{{ obj.title }}</text>
+            <text class="content" v-if="obj.content">{{ obj.content }}</text>
+
+            <div class="modal_view">
+                <text v-if="obj.showCancel" class="cancelText " @click.stop="cancel" :style="{color: obj.cancelColor}">{{ obj.cancelText || "取消" }}</text>
+                <text class="confirmText " @click.stop="confirm" :style="{color: obj.confirmColor}">{{ obj.confirmText || "确定" }}</text>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    import Binding from "weex-bindingx";
+
+    class PrivateData {
+        static isAnimating = false; // 动画是否显示中
+        static maskShow = false; // 窗口是否再显示中
+    }
+
+    export default {
+        data() {
+            return {
+                visible: false,
+                obj: {
+                    title: 'modal title',
+                    content: "modal content",
+                    confirmText: "确定",
+                    cancelColor: "rgba(0,0,0,0.6)",
+                    confirmColor: "#3396fb",
+                    cancelText: "取消",
+                    showCancel : true,
+                }
+            }
+        },
+
+        watch: {
+            modal() {
+                this.initModal();
+            }
+        },
+
+        mounted() {
+            this.initModal();
+        },
+
+        props: {
+            modal: {
+                type: Object,
+                default() {
+                    return {
+                        title: 'modal title',
+                        content: "modal content",
+                        confirmText: "确定",
+                        cancelColor: "rgba(0,0,0,0.6)",
+                        confirmColor: "#3396fb",
+                        cancelText: "取消",
+                        showCancel : true,
+                    }
+                }
+            }
+        },
+
+        methods: {
+            initModal() {
+                let obj = this.obj;
+                for (let k in this.modal) {
+                    if (this.modal[k] === undefined) continue;
+
+                    obj[k] = this.modal[k];
+                }
+                this.obj = obj;
+            },
+
+            show() {
+                this.visible = true;
+                if (PrivateData.maskShow) return;
+
+                PrivateData.maskShow = true;
+                setTimeout(() => {
+                    let duration = 400;
+                    Binding.bind({
+                        eventType: 'timing',
+                        exitExpression: {
+                            origin: `t>${duration}`
+                        },
+                        props: [
+                            {
+                                element: this.getEl(this.$refs.mask),
+                                property: 'opacity',
+                                expression: {
+                                    origin: 'easeInOutQuad(t+300,0,1-0,200)'
+                                }
+                            },
+                            {
+                                element: this.getEl(this.$refs.cont),
+                                property: 'opacity',
+                                expression: {
+                                    origin: 'easeInOutQuad(t+50,0,1-0,300)'
+                                }
+                            },
+                            {
+                                element: this.getEl(this.$refs.cont),
+                                property: 'transform.scale',
+                                expression: {
+                                    origin: 'easeInOutQuad(t,1.18,1-1.18,300)'
+                                }
+                            },
+                        ]
+                    });
+                }, 100);
+            },
+
+            hide() {
+                let duration = 600;
+                Binding.bind({
+                    eventType: 'timing',
+                    exitExpression: {
+                        origin: `t>${duration}`
+                    },
+                    props: [
+                        {
+                            element: this.getEl(this.$refs.cont),
+                            property: 'opacity',
+                            expression: {
+                                origin: 'easeInOutQuad(t+10,1,0-1,300)'
+                            }
+                        },
+                        {
+                            element: this.getEl(this.$refs.mask),
+                            property: 'opacity',
+                            expression: {
+                                origin: 'easeInOutQuad(t+200,1,0-1,500)'
+                            }
+                        }
+                    ]
+                }, () => {
+                    PrivateData.maskShow = false;
+                    setTimeout(() => {
+                        this.visible = false;
+                    }, 100);
+                });
+            },
+
+            cancel() {
+                this.hide();
+                this.$emit("onModalChanged", false)
+            },
+
+            confirm() {
+                this.hide();
+                this.$emit("onModalChanged", true)
+            },
+
+            getEl(e) {
+                return e.ref;
+            },
+        }
+    }
+</script>
+
+<style>
+    .module_mask{
+        opacity: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 750px;
+        flex: 1;
+        background-color: rgba(0,0,0,0.6);
+        z-index: 1000;
+        padding: 0 60px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .module{
+        width: 630px;
+        background-color: #ffffff;
+        border-radius: 16px;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding-top: 50px;
+        z-index: 2000;
+    }
+    .title{
+        font-size: 36px;
+        color: #101d36;
+        text-align: center;
+        line-height: 42px;
+    }
+    .content{
+        font-size: 36px;
+        color: #101d36;
+        text-align: center;
+        line-height: 42px;
+        margin-top: 60px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+    .modal_view{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 50px;
+        flex: 1;
+        border-radius: 0 0 16px 16px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 34px;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: #f5f5f5;
+    }
+    .cancelText{
+        text-align: center;
+        font-size: 34px;
+        flex: 1;
+        height: 100px;
+        line-height: 100px;
+        border-right-width: 1px;
+        border-right-style: solid;
+        border-right-color: #f5f5f5;
+        box-sizing: border-box;
+    }
+    .confirmText{
+        text-align: center;
+        font-size: 34px;
+        flex: 1;
+        height: 100px;
+        line-height: 100px;
+    }
+</style>

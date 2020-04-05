@@ -1,0 +1,1 @@
+<view class="index"><block wx:if="{{accountSource==2}}"><developer vue-id="1" bind:__l="__l"></developer></block><block wx:if="{{accountSource==1}}"><adviser vue-id="2" bind:__l="__l"></adviser></block></view>

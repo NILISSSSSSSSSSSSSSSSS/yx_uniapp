@@ -1,0 +1,69 @@
+
+page{
+    background-color: #f8f8f8;
+    width: 100%;
+    height: 100%;
+}
+.about_us{
+    background-color: #f8f8f8;
+    width: 100%;
+    height: 100%;
+}
+.about_logo{
+    width: 160rpx;
+    height: 173rpx;
+    margin: 184rpx auto 0;
+}
+.cont{
+    width: 100%;
+    background-color: #f8f8f8;
+    z-index: 9;
+    position: relative;
+    margin-top: 20rpx;
+}
+.title{
+    width: 100%;
+    text-align: center;
+    font-family: "FZZCHJW--GB1-0";
+    font-size: 37rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: 60rpx;
+    color: #595656;
+    margin-bottom: 95rpx;
+}
+.cont_subject{
+    text-align: center;
+    font-family: PingFang-SC-Medium;
+    font-size: 26rpx;
+    line-height: 50rpx;
+    color: #191f25;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    padding-left: 224rpx;
+    box-sizing: border-box;
+}
+.cont_subject>view{
+    color: #a3a5a8;
+    padding-right: 16rpx;
+    box-sizing: border-box;
+}
+.bottom_info{
+    font-family: PingFang-SC-Medium;
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 42rpx;
+    color: #a3a5a8;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 110rpx;
+    left: 0;
+}
+.empty_view{
+    height: 160rpx;
+    width: 100%;
+}
+

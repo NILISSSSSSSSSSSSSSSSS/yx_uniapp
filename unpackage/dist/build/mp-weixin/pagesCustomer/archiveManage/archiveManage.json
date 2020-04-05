@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "经纪人管理",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "scroll-loading": "/components/scrollLoading",
+    "no-data": "/components/noData"
+  }
+}

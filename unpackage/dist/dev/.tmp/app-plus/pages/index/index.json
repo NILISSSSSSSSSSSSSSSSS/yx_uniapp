@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "titleView": false,
+  "scrollIndicator": "none",
+  "softinputNavBar": "none",
+  "bounce": "none",
+  "usingComponents": {
+    "developer": "/pages/index/components/developer",
+    "adviser": "/pages/index/components/adviser"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "collect-form-id": "/components/collectFormId",
+    "show-modal": "/components/showModal"
+  }
+}

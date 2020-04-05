@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "trend_line": "/pages/buildList/components/content/charts/trend_line",
+    "sell_proportion_pie": "/pages/buildList/components/content/charts/sell_proportion_pie",
+    "cust_statistic_info_arcbar_band-rate": "/pages/buildList/components/content/charts/cust_statistic_info_arcbar_bandRate",
+    "cust_statistic_info_arcbar_sign-rate": "/pages/buildList/components/content/charts/cust_statistic_info_arcbar_signRate"
+  }
+}

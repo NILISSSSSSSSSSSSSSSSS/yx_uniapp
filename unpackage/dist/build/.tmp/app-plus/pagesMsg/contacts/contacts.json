@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "通讯录",
+  "bounce": "none",
+  "softinputNavBar": "none",
+  "scrollIndicator": "none",
+  "usingComponents": {
+    "scroll-loading": "/components/scrollLoading",
+    "show-modal": "/components/showModal"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "read-status": "/pagesMsg/components/im/readStatus"
+  },
+  "component": true
+}

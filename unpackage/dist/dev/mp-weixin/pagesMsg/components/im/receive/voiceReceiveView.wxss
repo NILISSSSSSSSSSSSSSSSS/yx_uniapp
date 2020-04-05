@@ -1,0 +1,50 @@
+
+.voiceReceiveView.data-v-cf2b5304{
+	background-color:#fff;
+	color:#041c0c;
+	line-height:1.5;
+	position:relative;
+	margin-left:16rpx;
+	min-height:40rpx;
+	padding: 20rpx 20rpx;
+	box-sizing:border-box;
+	max-width:70%;
+	border-radius:16rpx;
+	word-break:break-all;
+	font-size:32rpx;
+	text-align:center;
+	line-height:1.5;
+	width:200rpx;
+}
+/*.voiceReceiveView::before{*/
+/*content: '';*/
+/*position: absolute;*/
+/*top: 15upx;*/
+/*width: 20upx;*/
+/*height: 20upx;*/
+/*left:-16upx;*/
+/*border-right: 10upx solid #fff;*/
+/*background: url('http://cdn.haofang.net/static/uuminiapp/im/left_icon.png') no-repeat;*/
+/*background-size: 17upx 13upx;*/
+/*}*/
+.voiceReceiveView_img.data-v-cf2b5304{
+	width: 22rpx;
+	height: 32rpx;
+	margin: auto 0;
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+}
+.voice_length.data-v-cf2b5304{
+	margin-left: 20rpx;
+}
+.voice_unread.data-v-cf2b5304{
+	position: absolute;
+	right: -32rpx;
+	border-radius: 100%;
+	background: red;
+	width: 16rpx;
+	height: 16rpx;
+	overflow: hidden;
+	top: 32rpx;
+}
+

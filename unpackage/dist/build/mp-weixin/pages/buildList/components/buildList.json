@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "scroll-loading": "/components/scrollLoading"
+  },
+  "component": true
+}

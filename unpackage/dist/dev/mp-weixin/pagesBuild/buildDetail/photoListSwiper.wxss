@@ -1,0 +1,154 @@
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1452727 */
+  src: url('https://at.alicdn.com/t/font_1452727_auwksg0526u.eot');
+  src: url('https://at.alicdn.com/t/font_1452727_auwksg0526u.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1452727_auwksg0526u.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1452727_auwksg0526u.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1452727_auwksg0526u.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1452727_auwksg0526u.svg#iconfont') format('svg');
+}
+.iconfont.data-v-7001edea {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconuser.data-v-7001edea:before {
+  content: "\E7AE";
+}
+.iconmobile.data-v-7001edea:before {
+  content: "\E7B2";
+}
+.iconphone.data-v-7001edea:before {
+  content: "\E7E3";
+}
+.iconright.data-v-7001edea:before {
+  content: "\E7EB";
+}
+.iconleft.data-v-7001edea:before {
+  content: "\E7EC";
+}
+.iconreturn.data-v-7001edea:before {
+  content: "\E720";
+}
+text[class*="icon-"].data-v-7001edea,
+view[class*="icon-"].data-v-7001edea,
+button[class*="icon-"].data-v-7001edea {
+  font-family: "iconfont";
+  font-size: inherit;
+  font-style: normal;
+}
+.photo-list-swiper.data-v-7001edea {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.zhan-wei.data-v-7001edea {
+  width: 100%;
+  height: 40rpx;
+  background-color: #000000;
+}
+.nav-bar.data-v-7001edea {
+  position: relative;
+  width: 100%;
+  height: 120rpx;
+  overflow: hidden;
+  background-color: #000000;
+}
+.nav-bar>.n-v-back.data-v-7001edea {
+  position: absolute;
+  left: 28rpx;
+  top: 0;
+  width: 50rpx;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  z-index: 99;
+}
+.nav-bar>.n-v-back>text.data-v-7001edea {
+  font-size: 44rpx;
+  color: #ffffff;
+}
+.nav-bar>.n-v-content.data-v-7001edea {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  color: #ffffff;
+  font-size: 34rpx;
+}
+.swiper-view.data-v-7001edea {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 160rpx);
+  background-color: #000000;
+}
+.swiper-box.data-v-7001edea, .swiper-item.data-v-7001edea {
+  width: 100%;
+  height: 100%;
+}
+.swiper-item.data-v-7001edea {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.swiper-item>view.data-v-7001edea {
+  position: relative;
+  width: 100%;
+	height: 556rpx;
+}
+.swiper-item>view>image.data-v-7001edea {
+  width: 100%;
+	height: 556rpx;
+}
+.swiper-item>view>view.data-v-7001edea {
+  position: absolute;
+  top: 556rpx;
+  left: 0;
+  width: 100%;
+  height: auto;
+  color: #ffffff;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.swiper-item>view>view>.type-title.data-v-7001edea {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+.swiper-item>view>view>.type-name.data-v-7001edea {
+  line-height: 1;
+  font-size: 28rpx;
+}
+.swiper-item>view>view>.type-dec.data-v-7001edea {
+  height: auto;
+  font-size: 24rpx;
+  margin-top: 28rpx;
+  max-height: 156rpx;
+  overflow: auto;
+}
+

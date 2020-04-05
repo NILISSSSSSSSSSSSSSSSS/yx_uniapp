@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "编辑合作规则",
+  "usingComponents": {
+    "ei-calendar": "/components/ei-calendar/ei-calendar"
+  }
+}

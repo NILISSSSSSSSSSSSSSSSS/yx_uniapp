@@ -1,0 +1,1334 @@
+<template>
+    <div class="wrapper" :style="{height: height}" @click="scrollClick">
+        <list class="chat-list">
+            <refresh v-if="haveMoreData" class="refresh" @refresh="onRefresh"
+                     :display="refreshing ? 'show' : 'hide'">
+                <loading-indicator class="indicator"></loading-indicator>
+            </refresh>
+
+            <!--没有更早的消息了-->
+            <cell style="width: 750upx;" class="f_r_c">
+                <text v-if="!haveMoreData" class="f_r_c no_ago_msg_text">没有更早的消息了</text>
+            </cell>
+
+            <!--顶部占位-->
+            <cell style="height:40upx"></cell>
+
+            <cell v-for="(item, index) in chartList" :key="index" class="cell_item">
+                <!-- 消息时间 -->
+                <div v-if="item.showTime" class="msg_send_time_view f_r_c">
+                    <text class="msg_send_time_text">{{ item.time }}</text>
+                </div>
+
+                <!--自己发的消息-->
+                <div style="display: flex;flex-direction: row;justify-content: flex-end;"
+                     class="f_r_e" ref="messages" v-if="item.mySend">
+                    <text-me v-if="item.type === 'text'" :item="item"></text-me>
+
+                    <voice-me v-if="item.type === 'voice'" :item="item"
+                              @voicePlayChange="voicePlayChange"
+                              :currentClickIndex="currentClickIndex"
+                              :index="index">
+                    </voice-me>
+
+                    <img-me v-if="item.type === 'img'" :item="item"
+                            @lookMaxImgChange="lookMaxImgChange">
+                    </img-me>
+
+                    <position-me v-if="item.type === 'position'" :item="item"></position-me>
+
+                    <header-me :headImg="meHeadImg"></header-me>
+                </div>
+
+                <!--接收的消息-->
+                <div class="f_r_s" ref="messages" v-if="!item.mySend">
+                    <header-receive :headImg="otherHeadImg"></header-receive>
+
+                    <text-receive v-if="item.type === 'text'" :item="item"></text-receive>
+
+                    <voice-receive v-if="item.type === 'voice'" :item="item"
+                                   @voicePlayChange="voicePlayChange"
+                                   :currentClickIndex="currentClickIndex"
+                                   :index="index">
+                    </voice-receive>
+
+                    <img-receive v-if="item.type === 'img'" :item="item"
+                                 @lookMaxImgChange="lookMaxImgChange">
+                    </img-receive>
+
+                    <position-receive v-if="item.type === 'position'" :item="item"></position-receive>
+                </div>
+            </cell>
+
+            <cell style="height:50upx"></cell>
+        </list>
+
+        <div @click.stop="" class="send_msg_cont">
+            <div class="send_msg f_r_b">
+                <div class="send_msg_left f_r_s">
+                    <image @click.stop="changeVoiceType" :class="[voiceMap[voiceBtnShow].className]"
+                           :src="voiceMap[voiceBtnShow].src" mode="aspectFit"></image>
+
+                    <input class="send_input f_r_s"
+                           placeholder="请输入聊天内容"
+                           style="placeholder-color: #c0c1c3"
+                           return-key-type="send"
+                           :hideDoneButton="'true'"
+                           upriseOffset="10"
+                           @return="inputSend"
+                           v-model="userInput" @focus="scrollToBottom"
+                           v-if="!voiceBtnShow" :autofocus="inputFocus"/>
+                    <div @touchstart="recordStart" @touchend="recordEnd"
+                         @touchmove.stop.prevent="recordMove"
+                         :class="[isAnBtn ? 'anzhu_btn_active' : '' ]"
+                         class="anzhu_btn" v-if="voiceBtnShow">
+                        <text class="anzhu_btn_text">{{ isAnBtn ? '松开 发送' : '按住 说话' }}</text>
+                    </div>
+                </div>
+
+                <view class="send_msg_right f_r_e">
+                    <image @click.stop="changeEmojiType" :class="[emojiMap[emojiBtnShow].className]"
+                           :src="emojiMap[emojiBtnShow].src"></image>
+
+                    <image v-if="!userInput" class="send_more_type"
+                           src="http://cdn.haofang.net/static/xfyx-uniapp/msg/more_send.png"
+                           @click.stop="lookMoreSendType"></image>
+
+                    <view @click.stop="sendTextBtn" v-if="userInput"
+                          class="send_text_btn f_r_c">
+                        <text class="send_text">发送</text>
+                    </view>
+                </view>
+            </div>
+
+            <!-- 表情swiper -->
+            <div v-if="emojiBtnShow" class="send_emoji_list" @click.stop="">
+                <swiper class="send_emoji_swiper" indicator-dots indicator-active-color="#999999" indicator-color="#e5e5e5">
+                    <swiper-item class="f_r_s send_emoji_swiper_item" v-for="(info, key) in emojiSwiperList" :key="key">
+                        <div @click.stop="addEmoji(emojiItem)" class="send_emoji_item_view f_r_c"
+                             v-for="(emojiItem, index) in info" :key="index">
+                            <image mode="aspectFit" class="send_emoji_img" :src="emojiItem.img"></image>
+                        </div>
+
+                        <div @click.stop="delEmoji" class="send_emoji_del f_c_c">
+                            <image src="http://cdn.haofang.net/static/uuminiapp/im/delete.png" class="send_emoji_del_img"></image>
+                        </div>
+                    </swiper-item>
+                </swiper>
+            </div>
+
+            <!-- 更多功能 -->
+            <div v-if="moreTypeShow" class="send_more_type_list f_r_s">
+                <div @click.stop="senMoreMsg(item)" class="send_more_type_item f_c_c"
+                     :style="{'margin-right': (index+1)%3 == 0 ? '0' : '75upx'}"
+                     v-for="(item, index) in moreSendTypeList" :key="index">
+                    <image class="send_more_img_view" :src="item.imgSrc"></image>
+                    <text class="send_more_text">{{ item.text }}</text>
+                </div>
+            </div>
+        </div>
+
+        <!--录音弹窗-->
+        <div @touchmove.stop.prevent="moveHandle" v-if="voiceTcShow" class="voice_tc_view f_c_c">
+            <div :class="[voiceCancelSend ? 'voice_tc_cont_active':'']" class="voice_tc_cont f_c_c">
+                <text class="voice_tc_time">{{ voiceCancelSend ? '' : voiceTimeLength }}</text>
+                <image v-if="voiceCancelSend" class="che_hui" src="http://cdn.haofang.net/static/xffx-uniapp/msg/chehui.png"></image>
+                <image v-if="!voiceCancelSend" class="send_voice_new" src="http://cdn.haofang.net/static/xffx-uniapp/msg/send_voice_new.png"></image>
+                <text v-if="voiceCancelSend" class="voice_tc_des">{{ voiceTcDes }}</text>
+                <text v-if="!voiceCancelSend" class="voice_tc_des" :class="[voiceCancelSend ? 'voice_cancel_send' : '']">{{ voiceTcDes }}</text>
+            </div>
+        </div>
+
+        <show-modal-view :modal='{
+            title: "拨打电话",
+            content: servicePhone,
+            confirmText: "呼叫",
+            cancelColor: "rgba(0,0,0,0.6)",
+            confirmColor: "#3396fb",
+        }' ref="modal" @onModalChanged="onModalChanged"></show-modal-view>
+    </div>
+</template>
+
+<style>
+    @import "../../common/nvue/common.css";
+    .wrapper {
+        justify-content: space-between;
+        width: 750upx;
+        height: 100%;
+    }
+    .chat-list {
+        flex: 1;
+        width: 750upx;
+        height: 100%;
+        background-color: #F3F3F3;
+    }
+    .cell_item{
+        width: 750upx;
+        padding-left: 30upx;
+        padding-right: 30upx;
+        box-sizing: border-box;
+    }
+
+    /*时间*/
+    .msg_send_time_view {
+        text-align: center;
+        font-size: 24upx;
+        margin-top: 40upx;
+        margin-bottom: 40upx;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .msg_send_time_text {
+        min-width: 150upx;
+        height: 40upx;
+        line-height: 40upx;
+        text-align: center;
+        border-radius: 6upx;
+        background-color: #dddddd;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 10upx;
+        padding-right: 10upx;
+        box-sizing: border-box;
+        max-width: 230upx;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 20upx;
+        color: #ffffff;
+    }
+
+    /*下拉刷新*/
+    .refresh {
+        width: 750upx;
+        display: flex;
+        align-items: center;
+    }
+    .no_ago_msg_text {
+        color: #333333;
+        font-size: 20upx;
+        margin-top: 30upx;
+        text-align: center;
+    }
+    .indicator {
+        margin-top: 16upx;
+        height: 40upx;
+        width: 40upx;
+        color: blue;
+    }
+
+    /*发送*/
+    .send_msg_cont{
+        flex: 0;
+        background-color: #FFFFFF;
+        align-items: center;
+        width: 750upx;
+    }
+    .send_msg{
+        width:750upx;
+        background-color:#fff;
+        height: 100upx;
+        line-height: 100upx;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 26upx;
+        padding-right: 26upx;
+        box-sizing: border-box;
+        align-items: center;
+    }
+    .send_msg_left{
+        width: 550upx;
+        padding-right: 2upx;
+        box-sizing: border-box;
+        align-items: center;
+    }
+    .send_msg_right{
+        flex: 0;
+        align-items: center;
+    }
+    .send_more_type{
+        width: 46upx;
+        height: 46upx;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0;
+        margin-left: 0;
+        flex-shrink: 0;
+    }
+    .emoji_type_input,.key_type_input{
+        width: 46upx;
+        height: 46upx;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 30upx;
+        margin-left: 0;
+        flex-shrink: 0;
+    }
+    .voice_type_input{
+        height: 46upx;
+        width: 46upx;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 20upx;
+        margin-left: 0;
+        flex-shrink: 0;
+    }
+    .anzhu_btn{
+        height: 74upx;
+        line-height: 74upx;
+        background-color: #f8f8f8;
+        border-radius: 8upx;
+        flex: 1;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 32upx;
+        color: #191f25;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .anzhu_btn_text{
+        font-size: 32upx;
+        color: #191f25;
+        height: 74upx;
+        line-height: 74upx;
+        text-align: center;
+    }
+    .anzhu_btn_active{
+        background-color: #ebebeb!important;
+    }
+    .send_input{
+        height: 67upx;
+        line-height: 67upx;
+        background-color: #ffffff;
+        flex: 1;
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 16upx;
+        padding-right: 20upx;
+        box-sizing: border-box;
+        font-size: 32upx;
+        color: #101D36;
+    }
+    .send_text_btn{
+        width:90upx;
+        height:65upx;
+        line-height: 65upx;
+        color:#ffffff;
+        background-color:#3396fb;
+        text-align:center;
+        font-size:26upx;
+        border-radius:6upx;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 0;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .send_text{
+        line-height: 65upx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color:#ffffff;
+        font-size:26upx;
+    }
+
+    /* 表请输入 */
+    .send_emoji_list{
+        height: 430upx;
+        padding-top: 20upx;
+        background-color: #FFFFFF;
+        border-top-color: #e7e7e7;
+        border-top-style: solid;
+        border-top-width: 1upx;
+        width: 750upx;
+        box-sizing: border-box;
+    }
+    .send_emoji_swiper,.send_emoji_swiper_item{
+        width: 750upx;
+        height: 430upx;
+    }
+    .send_emoji_swiper_item{
+        flex-wrap: wrap;
+        padding-bottom: 40upx;
+        box-sizing: border-box;
+        align-items: center;
+    }
+    .send_emoji_item_view,.send_emoji_del{
+        width: 105upx;
+        height: 80upx;
+        flex-shrink: 0;
+        align-items: center;
+    }
+    .send_emoji_img{
+        height: 64upx;
+        width: 64upx;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        align-items: center;
+    }
+    .send_emoji_del_img{
+        height: 64upx;
+        width: 70upx;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        align-items: center;
+    }
+
+    /* 更多 */
+    .send_more_type_list{
+        flex-wrap: wrap;
+        width: 750upx;
+        padding-top: 40upx;
+        padding-bottom: 40upx;
+        padding-left: 40upx;
+        padding-right: 40upx;
+        background-color: #ffffff;
+        border-top-width: 1upx;
+        border-top-style: solid;
+        border-top-color: #e7e7e7;
+        box-sizing: border-box;
+    }
+    .send_more_type_item{
+        flex-shrink: 0;
+        margin-right: 75upx;
+    }
+    .send_more_type_item:nth-child(3n){
+        margin-right: 0;
+    }
+    .send_more_img_view{
+        width: 104upx;
+        height: 104upx;
+        background-color: #f9f9f9;
+        box-sizing: border-box;
+        align-items: center;
+    }
+    .album_send{
+        width: 42upx;
+        height: 42upx;
+        margin: auto;
+    }
+    .camera_send{
+        width: 50upx;
+        height: 42upx;
+        margin: auto;
+    }
+    .send_more_text{
+        line-height:50upx;
+        font-size: 28upx;
+        color: #191f25;
+        text-align: center;
+        margin-top: 10upx;
+    }
+
+    /*语音弹窗*/
+    .voice_tc_view{
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 88;
+        background: transparent;
+        align-items: center;
+    }
+    .voice_tc_cont{
+        align-items: center;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 99999;
+        border-radius: 30upx;
+        width: 250upx;
+        height: 250upx;
+    }
+    .voice_tc_cont_active{
+        background-color: rgba(250,87,65, 0.9);
+    }
+    .voice_tc_time{
+        text-align: center;
+        font-size: 24upx;
+        color: #ffffff;
+        letter-spacing: 2upx;
+        height: 26upx;
+        line-height: 26upx;
+    }
+    .che_hui{
+        width: 82upx;
+        height: 108upx;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -2upx;
+        margin-bottom: 36upx;
+    }
+    .send_voice_new{
+        width: 55upx;
+        height: 87upx;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 28upx;
+        margin-bottom: 28upx;
+    }
+    .voice_tc_des{
+        text-align: center;
+        font-size: 24upx;
+        color: rgba(255,255,255,0.8);
+    }
+</style>
+
+<script>
+    import textMe from "./componnents/im/me/textMe.nvue";
+    import voiceMe from "./componnents/im/me/voiceMe.nvue";
+    import imgMe from "./componnents/im/me/imgMe.nvue";
+    import textReceive from "./componnents/im/receive/textReceive.nvue";
+    import voiceReceive from "./componnents/im/receive/voiceReceive.nvue";
+    import imgReceive from "./componnents/im/receive/imgReceive.nvue";
+    import headerReceive from "./componnents/im/receive/headerReceive.nvue";
+    import headerMe from "./componnents/im/me/headerMe.nvue";
+    import positionMe from "./componnents/im/me/positionMe.nvue";
+    import positionReceive from "./componnents/im/receive/positionReceive.nvue";
+    import showModalView from "../../components/nvue/showModal.nvue";
+
+    import {Const} from "../../utils/Const";
+    import {AppUtils, Platform, Utils} from "../../utils/Utils";
+    import {ConsultantListModel} from "../../model/LoginSuccessModel";
+    import {GetLoginModel} from "../../model/LoginSuccessModel";
+    import {ChatListModel} from "../../model/im/ChatListModel";
+    import {
+        ImSendMessage,
+        DealChartDetail,
+        ChartDetailItem,
+        GetEmojiMap,
+        PositionChartItem
+    } from "../../utils/ImChart";
+    import {formatTimeNew} from "../../utils/common";
+    import {DealLastMsgTime} from "../../utils/ImChart";
+    import {Notify} from "../../utils/Notify";
+    import {Notification} from "../../utils/Notification";
+    import {Permission} from "../../utils/Permission";
+    import {DifferenceApi} from "../../utils/DifferenceApi";
+    import {GpsInfoModel} from "../../model/GpsInfoModel";
+    import {GetUserMobile} from "../../net/MsgNet";
+
+    const dom = weex.requireModule('dom');
+
+    class PrivateData {
+        static imgList = [];  // 大图列表
+        static ImChart = null;
+        static haveMoreData = true;
+        // 语音播放管理
+        static innerAudioContext = uni.createInnerAudioContext();
+        static params = {}; // 页面参数
+        static addEmojiList = [];
+        static recordTimeOutVal = null;
+        static voiceStartTime = 0;  // 录音开始时间
+        static isClickPhoto = false;  // 是否点击过相机
+        static recorderManager = null;  // 录音管理
+    }
+
+    export default {
+        components: {
+            textMe,voiceMe,imgMe,headerMe,positionMe,showModalView,
+            textReceive,voiceReceive,imgReceive,headerReceive,
+            positionReceive,
+        },
+
+        data() {
+            let map = new GetEmojiMap().dealEmojiSwiperData();
+            return {
+                height: "100%",
+                titleText: "", // 标题
+                messageId: "",  // 绘画id
+                otherHeadImg: Const.imDefaultHeadImg,  // 另一方头像
+                meHeadImg: Const.imDefaultHeadImg,   // 自己头像
+                userInput: "",  // 输入框内容
+                chartList: [],  // 绘画内容数组
+                feedbackOptions: [],
+                currentClickIndex: "err",  // 语音点击的默认索引
+                refreshing: false, // 是否正在下拉刷新
+                haveMoreData: true, // 是否还有更多的数据
+                servicePhone: "", // 服务电话
+
+                // ---------- 发送相关参数 ---------
+                // 表情和输入法的切换
+                emojiBtnShow: false,
+                emojiMap: {
+                    false: {
+                        src: "http://cdn.haofang.net/static/xfyx-uniapp/msg/emoji_send.png",
+                        className: "emoji_type_input"
+                    },
+                    true: {
+                        src: "http://cdn.haofang.net/static/xfyx-uniapp/msg/emoji_send.png",
+                        className: "key_type_input"
+                    }
+                },
+
+                // 语音切换
+                voiceBtnShow: false,
+                voiceMap: {
+                    false: {
+                        src: "http://cdn.haofang.net/static/xfyx-uniapp/msg/voice_send.png",
+                        className: "voice_type_input"
+                    },
+                    true: {
+                        src: "http://cdn.haofang.net/static/xffx-uniapp/msg/keyword_new.png",
+                        className: "voice_type_input"
+                    }
+                },
+
+                // input focus
+                inputFocus: false,
+
+                moreTypeShow: false,  // 更多
+
+                // 表情swiper
+                emojiSwiperList: map.emojiList || {},
+
+                // 更多功能列表
+                moreSendTypeList: [
+                    {
+                        event: "getPhoto",
+                        imgSrc: "http://cdn.haofang.net/static/xfyx-uniapp/msg/ablum_send.png",
+                        text: "相册",
+                        size: "55%",
+                        className: "album_send"
+                    },
+                    {
+                        event: "getTakePhoto",
+                        imgSrc: "http://cdn.haofang.net/static/xfyx-uniapp/msg/photo_send.png",
+                        text: "拍摄",
+                        size: "55%",
+                        className: "camera_send"
+                    },
+                    {
+                        event: "getPosition",
+                        imgSrc: "http://cdn.haofang.net/static/xfyx-uniapp/msg/position_send.png",
+                        text: "位置",
+                        size: "55%",
+                        className: "camera_send"
+                    }
+                ],
+
+                // 语音录制相关参数
+                voiceTcShow: false,
+                voiceTimeLength: "00:00",
+                voiceTcDes: "手指上滑，取消发送",
+                voiceCancelSend: false, // 是否是取消发送语音
+                haveVoiceAuthSetting: false,  // 是否有语音权限
+                isAnBtn: false, // 是否长按
+            }
+        },
+
+        created() {
+            const res = uni.getSystemInfoSync();
+            this.height = res.windowHeight + "px";
+        },
+
+        mounted() {
+            let params = {
+                messageId: new AppUtils().getParam("messageId"),
+                name: new AppUtils().getParam("name"),
+            };
+            this.initParams(params);
+            PrivateData.ImChart = getApp().globalData.imChartClass;
+            PrivateData.ImChart.messageId = params.messageId || "";
+            PrivateData.ImChart.inChartDetail = true;
+
+            this.initChartDetail();
+            // 监听“返回”按钮事件
+            plus.key.addEventListener("backbutton",function(){
+                plus.key.hideSoftKeybord();
+                setTimeout(() => {
+                    uni.navigateBack({
+                        delta: 1
+                    });
+                }, 100);
+            });
+            new Notification().addObserver(this, "ImLinkSuccessChange", Notify.ImLinkSuccessChange.Name);
+            // 监听用户信息事件
+            new Notification().addObserver(this, "UserInfoChanged", Notify.UserInfoChanged.Name);
+            // 监听已读回执
+            new Notification().addObserver(this, "MsgReadChanged", Notify.MsgReadChanged.Name);
+            // 监听消息
+            new Notification().addObserver(this, "UpChartMsgChanged", Notify.UpChartMsgChanged.Name);
+            // 监听消息发送成功
+            new Notification().addObserver(this, "MsgSendSuccessChange", Notify.MsgSendSuccessChange.Name);
+            // 监听发送点击
+            new Notification().addObserver(this, "ClickChartMoreInfo", Notify.ClickChartMoreInfo.Name);
+            // 监听原生按钮点击事件
+            uni.onNavigationBarButtonTap((e) => {
+                if (!e.id) return;
+
+                if (e.id !== "telephone") return;
+
+                if (!this.servicePhone) {
+                    new DifferenceApi().showToast("暂无电话");
+                    return;
+                }
+
+                this.$refs.modal.show();
+            });
+
+            // 判断是否有语音权限
+            new Permission().voicePermission((val) => {
+                this.haveVoiceAuthSetting = !!(val === 3);
+            });
+        },
+
+        destroyed() {
+            // 移除“返回”监听
+            plus.key.removeEventListener("backbutton");
+            plus.key.hideSoftKeybord();
+            PrivateData.ImChart.inChartDetail = false;
+            new Notification().removeObserverAllNotification(this);
+        },
+
+        methods: {
+            // 初始化参数
+            initParams(params = {}) {
+                PrivateData.params = params;
+                if (params.name) {
+                    this.titleText = params.name;
+                    uni.setNavigationBarTitle({
+                        title: params.name
+                    });
+                }
+                if (params.messageId) {
+                    this.messageId = params.messageId;
+                }
+            },
+            // 初始化消息列表
+            initChartDetail(callback = function () {}) {
+                // 获取用户信息
+                PrivateData.ImChart.imChartVal.getUser({
+                    account: this.messageId,
+                    sync: true,
+                    done: (error, user) => {
+                        console.error("--user--",user);
+                        let otherHeadImg = Const.imDefaultHeadImg;
+                        if (user && user.avatar) {
+                            otherHeadImg = new Utils().dealImgSrcSize(user.avatar, 80, 80);
+                        }
+                        if(new ConsultantListModel().getModel()
+                            && new ConsultantListModel().getModel()[this.messageId]
+                            && new ConsultantListModel().getModel()[this.messageId].avatar) {
+                            otherHeadImg = new Utils().dealImgSrcSize(
+                                new ConsultantListModel().getModel()[this.messageId].avatar,
+                                80,
+                                80
+                            );
+                        }
+                        if(!this.titleText && user.nick) {
+                            uni.setNavigationBarTitle({
+                                title: (user.nick || "")
+                            });
+                        }
+                        this.otherHeadImg = otherHeadImg;
+                    }
+                });
+                PrivateData.ImChart.getHistory(this.messageId,new Date().getTime()+10000,10,
+                    (res) => {
+                        console.error("--res--",res);
+                        this.chartList = res.list || [];
+                        this.scrollToBottom();
+                        callback(res);
+                        PrivateData.haveMoreData = res.haveMoreData || false;
+                        this.meHeadImg = GetLoginModel.getUserPhoto()
+                            ? new Utils().dealImgSrcSize(GetLoginModel.getUserPhoto(), 80, 80)
+                            : Const.imDefaultHeadImg;
+                        if(!this.titleText && res.name) {
+                            uni.setNavigationBarTitle({
+                                title: (res.name || "")
+                            });
+                        }
+                        let userId = GetLoginModel.getUserId() || "";
+                        let listModel = new ChatListModel().getModel() || {};
+                        let map = listModel[userId] || {};
+                        let obj = map[this.messageId] || {};
+                        obj.name = this.titleText || res.name || obj.name || "";
+                        map[this.messageId] = obj;
+                        listModel[userId] = map;
+                        new ChatListModel().setModel(listModel);
+                        this.upImgList();
+                    }
+                );
+                // 获取经纪人电话
+                new GetUserMobile({imId: this.messageId}).send()
+                .then(res => {
+                    if(res.errCode !== Const.success || !res.data) return;
+
+                    this.servicePhone = res.data.userMobile || "";
+                });
+            },
+
+            // 查看大图回调
+            lookMaxImgChange(item) {
+                if (!PrivateData.imgList.includes(item.content)) {
+                    PrivateData.imgList.push(item.content);
+                }
+                this.lookImgMax(item.content);
+            },
+            lookImgMax(url = "") {
+                uni.previewImage({
+                    current: url,
+                    urls: PrivateData.imgList,
+                    indicator: "number"
+                });
+            },
+            // 聊天内的图片资源
+            upImgList() {
+                PrivateData.imgList = [];
+                for (let item of this.chartList) {
+                    if (item.type === 'img') {
+                        PrivateData.imgList.push(item.content);
+                    }
+                }
+            },
+
+            // 点击空白区
+            scrollClick() {
+                uni.hideKeyboard();
+                if (this.moreTypeShow || this.emojiBtnShow) {
+                    this.emojiBtnShow = false;
+                    this.moreTypeShow = false;
+                    setTimeout(() => {
+                        this.scrollToBottom();
+                    }, 200);
+                }
+            },
+            // 滚到底部
+            scrollToBottom () {
+                console.log("scrollToBottom");
+                if (!this.$refs.messages) {
+                    return;
+                }
+
+                const lastMessage = this.$refs.messages[this.$refs.messages.length - 1];
+                setTimeout(() => {
+                    dom.scrollToElement(lastMessage, {
+                        offset: 0,
+                        animated: true
+                    })
+                }, 100)
+            },
+
+            // -----------------监听 回调----------------
+            // 新消息回调
+            UpChartMsgChanged(name, item) {
+                console.error("UpChartMsgChanged", item);
+                if (item) {
+                    this.chartList.push(item);
+                    this.upImgList();
+                    this.scrollToBottom();
+                }
+            },
+            // 消息发送成功回调
+            MsgSendSuccessChange(name, info) {
+                for (let i = 0;i<this.chartList.length;i++) {
+                    let item = this.chartList[i] || {};
+                    if (info.type && info.type === "position") {
+                        let content = JSON.parse(info.msg.content);
+                        if (content.data.locationImageUrl === item.content.staticImg) {
+                            item.isSendUser = false;
+                            item.msg = info.msg || {};
+                            item.sendFail = item.sendFail || false;
+                            this.$set(this.chartList, i, item);
+                            break;
+                        }
+                    }
+
+                    if (info.url === item.content) {
+                        item.isSendUser = false;
+                        item.msg = info.msg || {};
+                        item.sendFail = item.sendFail || false;
+                        this.$set(this.chartList, i, item);
+                        break;
+                    }
+                }
+            },
+            // 已读回执
+            MsgReadChanged(name, time) {
+                let chartList = this.chartList || [];
+                for (let item of chartList) {
+                    if (item.timeStr != undefined && item.timeStr <= time) {
+                        item.isRead = true;
+                    }
+                }
+                this.chartList = chartList;
+            },
+            // 监听下拉刷新完成
+            onRefresh() {
+                this.refreshing = true;
+                if(!PrivateData.haveMoreData) {
+                    setTimeout(() => {
+                        this.refreshing = false;
+                    }, 200);
+                    return;
+                }
+
+                let chartList = this.chartList || [];
+                let firstTimeStr = chartList.length > 0
+                    ? chartList[0].timeStr || new Date().getTime() : new Date().getTime();
+                PrivateData.ImChart.getHistory(this.messageId, firstTimeStr, 10, (res) => {
+                    console.log(res,"getHistory");
+                    this.chartList = (res.list || []).concat(chartList);
+                    this.upImgList();
+                    this.refreshing = false;
+                    PrivateData.haveMoreData = res.haveMoreData;
+                    this.haveMoreData = res.haveMoreData;
+                });
+            },
+            // 监听语音播放回调
+            voicePlayChange(item) {
+                if(item.isPlayIng) {
+                    this.currentClickIndex = "err";
+                    if(PrivateData.innerAudioContext && PrivateData.innerAudioContext.pause) {
+                        PrivateData.innerAudioContext.pause();
+                    }
+                    if(PrivateData.innerAudioContext && PrivateData.innerAudioContext.stop) {
+                        PrivateData.innerAudioContext.stop();
+                    }
+                    if(PrivateData.innerAudioContext && PrivateData.innerAudioContext.destroy) {
+                        PrivateData.innerAudioContext.destroy();
+                    }
+                    return;
+                }
+
+                PrivateData.innerAudioContext = uni.createInnerAudioContext();
+                this.currentClickIndex = item.index;
+                PrivateData.innerAudioContext.src = item.url;
+                PrivateData.innerAudioContext.play();
+                PrivateData.innerAudioContext.onError((res) => {
+                    this.currentClickIndex = "err";
+                });
+                PrivateData.innerAudioContext.onStop(res => {
+                    this.currentClickIndex = "err";
+                });
+                PrivateData.innerAudioContext.onEnded((res) => {
+                    this.currentClickIndex = "err";
+                });
+            },
+            // modal回调
+            onModalChanged(val) {
+                if (val) {
+                    new DifferenceApi().makePhoneCall(this.servicePhone);
+                    this.$refs.modal.hide();
+                }
+            },
+
+            // -----------------发送 api------------------
+            // 切换语音和文字输入
+            changeVoiceType() {
+                plus.key.hideSoftKeybord();
+                setTimeout(() => {
+                    this.voiceBtnShow = !this.voiceBtnShow;
+                    if(this.voiceBtnShow) {
+                        this.moreTypeShow = false;
+                        this.emojiBtnShow = false;
+                    }
+                    this.inputFocus = (!this.voiceBtnShow);
+                });
+            },
+            // 切换表情和文字输入
+            changeEmojiType() {
+                plus.key.hideSoftKeybord();
+                setTimeout(() => {
+                    this.emojiBtnShow = !this.emojiBtnShow;
+                    if(this.emojiBtnShow) {
+                        this.moreTypeShow = false;
+                        if (new Platform().getIsAndroid()) {
+                            this.scrollToBottom();
+                        }
+                    }
+                }, 100);
+            },
+            // 添加表情
+            addEmoji(item) {
+                this.userInput += item.fileName;
+                PrivateData.addEmojiList.push(item.fileName);
+            },
+            // 删除表情
+            delEmoji() {
+                if(PrivateData.addEmojiList.length === 0) return;
+
+                let str = this.userInput;
+                let delFileName = PrivateData.addEmojiList[PrivateData.addEmojiList.length - 1];
+                let i = str.lastIndexOf(delFileName);
+                str = str.substring(0,i) + str.substring(i+delFileName.length,str.length);
+                this.userInput = str;
+            },
+            // 切换更多功能
+            lookMoreSendType() {
+                plus.key.hideSoftKeybord();
+                setTimeout(() => {
+                    this.moreTypeShow = !this.moreTypeShow;
+                    if(this.moreTypeShow) {
+                        this.emojiBtnShow = false;
+                        if (new Platform().getIsAndroid()) {
+                            this.scrollToBottom();
+                        }
+                    }
+                }, 100);
+            },
+            // 更多点击
+            senMoreMsg(item) {
+                this[item.event](item);
+            },
+            // 选择图片
+            getPhoto(item) {
+                this.getTakePhoto(item, ["album"]);
+            },
+            // 拍照
+            getTakePhoto(item, sourceType = ["camera"]) {
+                let that = this;
+                new Permission().photoPermission((val) => {
+                    if (val === 1) {
+                        uni.showModal({
+                            title: "",
+                            content: "请打开设置-允许相机权限",
+                            showCancel: false,
+                            confirmText: "去开启",
+                            confirmColor: "#3396fb",
+                            success: (res) => {
+                                if(res.confirm) {
+                                    new Permission().openSet();
+                                }
+                            }
+                        });
+                        return;
+                    }
+
+                    if (val === 3) {
+                        uni.chooseImage({
+                            count: 9,
+                            sourceType: sourceType,
+                            success: function(res) {
+                                for (let tempSrc of (res.tempFilePaths || [])) {
+                                    that.uploadImg(tempSrc);
+                                }
+                            },
+                        });
+                    }
+                });
+            },
+            // 上传图片
+            uploadImg(url = "") {
+                if(!url) {
+                    new DifferenceApi().showToast("暂无图片路径，无法发送");
+                    return;
+                }
+
+                if(!this.messageId) {
+                    new DifferenceApi().showToast("暂无收件人id");
+                    return;
+                }
+
+                let time = new Date().getTime();
+                new ImSendMessage(this.messageId, PrivateData.ImChart).sendImage(url)
+                .then((file) => {
+                    let item = new ChartDetailItem();
+                    item.type = "img";
+                    item.content = file.url;
+                    item.width = file.w;
+                    item.height = file.h;
+                    item.mySend = true;
+                    item.isRead = false;
+                    item.timeStr = time;
+                    item.isSendUser = true;
+                    item.time = formatTimeNew(time);
+                    item.showTime = DealLastMsgTime.checkShowTime(this.messageId, time);
+                    DealLastMsgTime.setTime(time, this.messageId);
+                    new Notification().postNotification(Notify.UpChartMsgChanged.Name, item);
+                });
+            },
+            // 输入框发送
+            inputSend(info) {
+                if (info.returnKeyType && info.returnKeyType === "send" && info.value) {
+                    this.sendTextBtn();
+                }
+            },
+            //发送按钮
+            sendTextBtn () {
+                if (this.userInput) {
+                    this.sendTextMsgCommon(this.userInput);
+                    this.userInput = "";
+                }
+            },
+            // 发送的文字通用方法
+            sendTextMsgCommon(text) {
+                new ImSendMessage(this.messageId, PrivateData.ImChart).sendText(text)
+                .then(() => {
+                    let emoji =  new DealChartDetail().dealEmoji(text);
+                    let item = new ChartDetailItem();
+                    item.type = "text";
+                    item.content = text;
+                    item.mySend = true;
+                    item.timeStr = new Date().getTime();
+                    item.time = formatTimeNew(new Date().getTime());
+                    item.emoji = emoji;
+                    item.isRead = false;
+                    item.hasEmoji = (emoji[1].length > 0);
+                    item.showTime = DealLastMsgTime.checkShowTime(this.messageId, new Date().getTime());
+                    DealLastMsgTime.setTime(new Date().getTime(), this.messageId);
+                    new Notification().postNotification(Notify.UpChartMsgChanged.Name, item);
+                });
+            },
+            // 判断是否有录音权限 app-plus
+            checkHaveVoicePermission(callback = function () {}) {
+                let that = this;
+                if (that.haveVoiceAuthSetting) {
+                    callback(that.haveVoiceAuthSetting);
+                    return;
+                }
+
+                // #ifdef APP-PLUS
+                if (uni.getSystemInfoSync().platform !== "ios") {
+                    plus.android.requestPermissions(['android.permission.RECORD_AUDIO'], function(e){
+                        if(e.deniedAlways.length>0){	//权限被永久拒绝
+                            that.haveVoiceAuthSetting = false;
+                            callback(that.haveVoiceAuthSetting);
+                            // 弹出提示框解释为何需要定位权限，引导用户打开设置页面开启
+                            console.log('Always Denied!!! '+e.deniedAlways.toString());
+                        }
+                        if(e.deniedPresent.length>0){	//权限被临时拒绝
+                            that.haveVoiceAuthSetting = false;
+                            // 弹出提示框解释为何需要定位权限，可再次调用plus.android.requestPermissions申请权限
+                            console.log('Present Denied!!! '+e.deniedPresent.toString());
+                        }
+                        if(e.granted.length>0){	//权限被允许
+                            that.haveVoiceAuthSetting = true;
+                            //调用依赖获取定位权限的代码
+                            console.log('Granted!!! '+e.granted.toString());
+                        }
+                    }, function(e){
+                        that.haveVoiceAuthSetting = false;
+                        console.log('Request Permissions error:'+JSON.stringify(e));
+                        callback(that.haveVoiceAuthSetting);
+                    });
+                }
+
+                if (uni.getSystemInfoSync().platform === "ios") {
+                    let avaudiosession = plus.ios.import("AVAudioSession");
+                    let avaudio = avaudiosession.sharedInstance();
+                    let permissionStatus = avaudio.recordPermission();
+                    console.log("permissionStatus:" + permissionStatus);
+                    if (permissionStatus == 1684369017 || permissionStatus == 1970168948) {
+                        that.haveVoiceAuthSetting = false;
+                        callback(that.haveVoiceAuthSetting);
+                        console.log("麦克风权限没有开启");
+                    } else {
+                        that.haveVoiceAuthSetting = true;
+                        console.log("麦克风权限已经开启");
+                    }
+                    plus.ios.deleteObject(avaudiosession);
+                }
+                // #endif
+            },
+            // 监听录音结束
+            onRecordStop() {
+                let that = this;
+                PrivateData.recorderManager.onStop((res) => {
+                    that.isAnBtn = false;
+                    if(!that.haveVoiceAuthSetting || that.voiceCancelSend) return;
+
+                    // 小于1s的录音舍弃
+                    if(new Date().getTime() - PrivateData.voiceStartTime < 800) {
+                        return;
+                    }
+
+                    if(res.duration < 800) {
+                        new DifferenceApi().showToast("录音时间太短");
+                        return;
+                    }
+
+                    if(!res.tempFilePath) {
+                        new DifferenceApi().showToast("录音失败,暂无文件");
+                        return;
+                    }
+
+                    let time = new Date().getTime();
+                    new ImSendMessage(this.messageId, PrivateData.ImChart).sendVoice(res.tempFilePath,
+                        time - PrivateData.voiceStartTime)
+                    .then((msg) => {
+                        let item = new ChartDetailItem();
+                        item.type = "voice";
+                        item.content = msg.file.url;
+                        item.mySend = true;
+                        item.isRead = false;
+                        item.timeStr = time;
+                        item.isSendUser = true;
+                        item.voiceLength = msg.file.dur ? Math.round(Number(msg.file.dur)/1000) : 1;
+                        item.time = formatTimeNew(time);
+                        item.showTime = DealLastMsgTime.checkShowTime(this.messageId, new Date().getTime());
+                        DealLastMsgTime.setTime(time, this.messageId);
+                        new Notification().postNotification(Notify.UpChartMsgChanged.Name, item);
+                    });
+                });
+            },
+            // 录音开始
+            recordStart(e) {
+                let that = this;
+                this.voiceCancelSend = false;
+                that.voiceTimeLength = "00:00";
+                PrivateData.startInfo = e.changedTouches[0];
+                that.checkHaveVoicePermission((val) => {
+                    if (!val) {
+                        uni.showModal({
+                            title: "",
+                            content: "请打开设置-允许录音权限",
+                            showCancel: false,
+                            confirmText: "去开启",
+                            confirmColor: "#3396fb",
+                            success: (res) => {
+                                if(res.confirm) {
+                                    new Permission().openSet();
+                                }
+                            }
+                        });
+                        return;
+                    }
+
+                    PrivateData.recorderManager = uni.getRecorderManager();
+                    PrivateData.voiceStartTime = new Date().getTime();
+                    that.upRecordStart();
+                });
+            },
+            // 录音手指移动
+            recordMove(e) {
+                let endPageY = e.changedTouches[0].pageY || "";
+                let startPageY = PrivateData.startInfo.pageY || "";
+                if(endPageY < startPageY && (startPageY - endPageY) > 100) {
+                    this.voiceTcDes = "松开手指，取消发送";
+                    this.voiceCancelSend = true;
+                }else {
+                    this.voiceTcDes = "手指上滑，取消发送";
+                    this.voiceCancelSend = false;
+                }
+            },
+            // 录音结束
+            recordEnd(e) {
+                this.isAnBtn = false;
+                this.voiceTcShow = false;
+                PrivateData.endInfo = e.changedTouches[0];
+                clearInterval(PrivateData.recordTimeInterval);
+                PrivateData.recordTimeInterval = null;
+                clearTimeout(PrivateData.recordTimeOutVal);
+                PrivateData.recordTimeOutVal = null;
+
+                if(PrivateData.recorderManager) {
+                    PrivateData.recorderManager.stop();
+                    PrivateData.recorderManager = null;
+                }
+            },
+            // 更新录音开始动画
+            upRecordStart() {
+                let that = this;
+                clearTimeout(PrivateData.recordTimeOutVal);
+                PrivateData.recordTimeOutVal = null;
+                PrivateData.recordTimeOutVal = setTimeout(() => {
+                    let options = {
+                        duration: 600000,
+                        sampleRate: 44100,
+                        numberOfChannels: 1,
+                        encodeBitRate: 192000,
+                        format: 'mp3'
+                    };
+
+                    if(PrivateData.recorderManager) {
+                        PrivateData.recorderManager.start(options);
+                        that.voiceTcShow = true;
+                        // 安卓才震动
+                        if (new Platform().getIsAndroid()) {
+                            plus.device.vibrate(100);
+                        }
+                        that.isAnBtn = true;
+                        that.onRecordStop();
+                        let intervalTimeVal = 0;
+                        function dealVoiceTime() {
+                            intervalTimeVal++;
+                            let voiceTimeLength = "00:" + intervalTimeVal;
+                            if (intervalTimeVal < 10) {
+                                voiceTimeLength = "00:0" + intervalTimeVal;
+                            }
+                            if(intervalTimeVal >= 60) {
+                                let minute = parseInt(intervalTimeVal/60);
+                                let second = intervalTimeVal%60;
+                                voiceTimeLength = (minute < 10 ? "0" + minute : minute) + ":" + (second < 10 ? "0" + second : second);
+                            }
+                            that.voiceTimeLength = voiceTimeLength;
+                        }
+                        dealVoiceTime();
+                        PrivateData.recordTimeInterval = setInterval(() => {
+                            dealVoiceTime();
+                        }, 1000);
+                    }
+                }, 300);
+            },
+            // 选择地理位置
+            getPosition() {
+                let that = this;
+                let gpsInfo = new GpsInfoModel().getModel("gpsInfo") || {};
+                new Permission().locationPermission((val) => {
+                    if (val === 1) {
+                        uni.showModal({
+                            title: "",
+                            content: "请打开设置-允许定位权限",
+                            showCancel: false,
+                            confirmText: "去开启",
+                            confirmColor: "#3396fb",
+                            success: (res) => {
+                                if(res.confirm) {
+                                    new Permission().openSet();
+                                }
+                            }
+                        });
+                        return;
+                    }
+
+                    if (val === 3) {
+                        uni.chooseLocation({
+                            success: function (res) {
+                                let locationItem = new PositionChartItem();
+                                locationItem.lat = Number(res.latitude);
+                                locationItem.lng = Number(res.longitude);
+                                locationItem.address = res.address;
+                                locationItem.name = res.name;
+                                if(!that.messageId) {
+                                    new DifferenceApi().showToast("暂无收件人id");
+                                    return;
+                                }
+
+                                let time = new Date().getTime();
+                                new ImSendMessage(that.messageId, PrivateData.ImChart)
+                                .sendLocation(locationItem)
+                                .then((info) => {
+                                    locationItem.staticImg = info.url;
+                                    let item = new ChartDetailItem();
+                                    item.type = "position";
+                                    item.content = locationItem;
+                                    item.mySend = true;
+                                    item.isRead = false;
+                                    item.timeStr = time;
+                                    item.isSendUser = true;
+                                    item.time = formatTimeNew(time);
+                                    item.showTime = DealLastMsgTime.checkShowTime(that.messageId, time);
+                                    DealLastMsgTime.setTime(time, that.messageId);
+                                    new Notification().postNotification(Notify.UpChartMsgChanged.Name, item);
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        }
+    }
+</script>

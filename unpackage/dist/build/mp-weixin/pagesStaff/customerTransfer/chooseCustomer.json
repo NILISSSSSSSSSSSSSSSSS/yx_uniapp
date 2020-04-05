@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择客户",
+  "usingComponents": {
+    "staff-customer": "/pagesStaff/components/staffCustomer"
+  }
+}

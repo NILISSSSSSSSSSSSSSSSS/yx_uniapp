@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "通讯录",
+  "bounce": "none",
+  "usingComponents": {
+    "show-modal": "/components/showModal"
+  }
+}

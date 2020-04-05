@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "commission-customer-list": "/components/commissionCustomerList"
+  }
+}

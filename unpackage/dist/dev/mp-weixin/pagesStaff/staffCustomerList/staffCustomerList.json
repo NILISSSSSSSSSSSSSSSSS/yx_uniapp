@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "no-customer": "/pagesStaff/components/noCustomer",
+    "scroll-loading": "/components/scrollLoading",
+    "staff-customer": "/pagesStaff/components/staffCustomer"
+  }
+}

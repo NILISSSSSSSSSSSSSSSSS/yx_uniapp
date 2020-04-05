@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "楼盘动态",
+  "usingComponents": {
+    "scroll-loading": "/components/scrollLoading"
+  }
+}

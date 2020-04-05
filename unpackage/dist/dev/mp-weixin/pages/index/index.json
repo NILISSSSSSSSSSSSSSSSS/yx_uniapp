@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "developer": "/pages/index/components/developer",
+    "adviser": "/pages/index/components/adviser"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "添加员工",
+  "usingComponents": {
+    "collect-form-id": "/components/collectFormId"
+  }
+}

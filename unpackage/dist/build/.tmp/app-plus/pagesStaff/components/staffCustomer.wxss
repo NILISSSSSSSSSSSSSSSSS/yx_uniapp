@@ -1,0 +1,96 @@
+
+.name.data-v-2ea06c7d{
+    font-size: 32rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    line-height: 60rpx;
+    margin: auto 20rpx auto 0rpx;
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+    max-width: 200rpx;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.sex.data-v-2ea06c7d{
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    line-height: 60rpx;
+    margin: auto 20rpx auto 0rpx;
+}
+.phone.data-v-2ea06c7d{
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    line-height: 60rpx;
+    margin: auto 10rpx auto 0rpx;
+}
+.directCustomer.data-v-2ea06c7d{
+    font-size: 22rpx;
+    background-color: #eff4fe;
+    border-radius: 6rpx;
+    letter-spacing: 0rpx;
+    color: #3072f6;
+    margin: auto;
+    padding: 0rpx 5rpx 5rpx 5rpx;
+    text-align: center;
+}
+/*灰色按钮*/
+.status_orange.data-v-2ea06c7d{
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #ffb109;
+    margin: auto 0rpx auto 0rpx;
+}
+.status_green.data-v-2ea06c7d{
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #44bc6e;
+    margin: auto 0rpx auto 0rpx;
+}
+.status_gray.data-v-2ea06c7d{
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #a3a5a8;
+    margin: auto 0rpx auto 0rpx;
+}
+.demand.data-v-2ea06c7d{
+    font-size: 22rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 45rpx;
+    letter-spacing: 0rpx;
+    color: #a3a5a8;
+}
+.demand_build.data-v-2ea06c7d{
+    margin: auto 30rpx auto 0rpx;
+}
+.demand_room.data-v-2ea06c7d{
+    margin: auto auto auto 0rpx;
+}
+.room.data-v-2ea06c7d{
+    margin-right: 10rpx;
+}
+.price.data-v-2ea06c7d{
+    font-size: 22rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 45rpx;
+    letter-spacing: 0rpx;
+    color: #a3a5a8;
+}
+

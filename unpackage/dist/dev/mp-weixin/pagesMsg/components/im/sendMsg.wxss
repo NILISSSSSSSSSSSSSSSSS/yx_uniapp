@@ -1,0 +1,1299 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*发送*/
+.send_msg_cont.data-v-7c308ccd{
+	width: 100%;
+	background-color: #FFFFFF;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.send_msg.data-v-7c308ccd{
+	width:100%;
+	background-color:#fff;
+	height: 100rpx;
+	line-height: 100rpx;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 26rpx;
+	padding-right: 26rpx;
+	box-sizing: border-box;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.send_msg_left.data-v-7c308ccd{
+	width: 550rpx;
+	padding-right: 2px;
+	box-sizing: border-box;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.send_msg_right.data-v-7c308ccd{
+	-webkit-box-flex: 0;
+	-webkit-flex: 0;
+	        flex: 0;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.send_more_type.data-v-7c308ccd{
+	width: 46rpx;
+	height: 46rpx;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 0;
+	margin-left: 0;
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+}
+.emoji_type_input.data-v-7c308ccd,.key_type_input.data-v-7c308ccd{
+	width: 46rpx;
+	height: 46rpx;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 30rpx;
+	margin-left: 0;
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+}
+.voice_type_input.data-v-7c308ccd{
+	height: 46rpx;
+	width: 46rpx;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 20rpx;
+	margin-left: 0;
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+}
+.anzhu_btn.data-v-7c308ccd{
+	height: 74rpx;
+	line-height: 74rpx;
+	background-color: #f8f8f8;
+	border-radius: 8rpx;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	text-align: center;
+	box-sizing: border-box;
+	font-size: 32rpx;
+	color: #191f25;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.anzhu_btn_text.data-v-7c308ccd{
+	font-size: 32rpx;
+	color: #191f25;
+	height: 74rpx;
+	line-height: 74rpx;
+	text-align: center;
+}
+.anzhu_btn_active.data-v-7c308ccd{
+	background-color: #ebebeb!important;
+}
+.send_input.data-v-7c308ccd{
+	height: 67rpx;
+	line-height: 67rpx;
+	background-color: #ffffff;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	text-align: left;
+	margin-left: 0;
+	margin-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 16rpx;
+	padding-right: 20rpx;
+	box-sizing: border-box;
+	font-size: 32rpx;
+	color: #101D36;
+}
+.send_text_btn.data-v-7c308ccd{
+	width:90rpx;
+	height:65rpx;
+	line-height: 65rpx;
+	color:#ffffff;
+	background-color:#3396fb;
+	text-align:center;
+	font-size:26rpx;
+	border-radius:6rpx;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 0;
+	margin-right: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.send_text.data-v-7c308ccd{
+	line-height: 65rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	color:#ffffff;
+	font-size:26rpx;
+}
+/* 表请输入 */
+.send_emoji_list.data-v-7c308ccd{
+	height: 430rpx;
+	padding-top: 20rpx;
+	background: #FFFFFF;
+	border-top: 1rpx solid #e7e7e7;
+	width: 100%;
+	box-sizing: border-box;
+}
+.send_emoji_swiper.data-v-7c308ccd,.send_emoji_swiper_item.data-v-7c308ccd{
+	width: 100%;
+	height: 100%;
+}
+.send_emoji_swiper_item.data-v-7c308ccd{
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	padding-bottom: 40rpx;
+	box-sizing: border-box;
+}
+.send_emoji_item_view.data-v-7c308ccd,.send_emoji_del.data-v-7c308ccd{
+	width: 14.2%;
+	height: 80rpx;
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+}
+.send_emoji_img.data-v-7c308ccd{
+	height: 80%;
+	width: 100%;
+	margin: auto;
+}
+.send_emoji_del_img.data-v-7c308ccd{
+	margin: auto;
+	background:url(http://cdn.haofang.net/static/uuminiapp/pageNewUi/im_detail_sprites.png)  no-repeat;
+	background-size:306px 45px;
+	height:32px;
+	width:32px;
+	background-position:-91px 0;
+}
+/* 更多 */
+.send_more_type_list.data-v-7c308ccd{
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	width: 100%;
+	padding-top: 40rpx;
+	padding-bottom: 40rpx;
+	padding-left: 40rpx;
+	padding-right: 40rpx;
+	background-color: #ffffff;
+	border-top-width: 1rpx;
+	border-top-style: solid;
+	border-top-color: #e7e7e7;
+	box-sizing: border-box;
+}
+.send_more_type_item.data-v-7c308ccd{
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+	margin-right: 75rpx;
+}
+.send_more_type_item.data-v-7c308ccd:nth-child(3n){
+	margin-right: 0;
+}
+.send_more_img_view.data-v-7c308ccd{
+	width: 104rpx;
+	height: 104rpx;
+	background-color: #f9f9f9;
+	box-sizing: border-box;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.album_send.data-v-7c308ccd{
+	width: 42rpx;
+	height: 42rpx;
+	margin: auto;
+}
+.camera_send.data-v-7c308ccd{
+	width: 50rpx;
+	height: 42rpx;
+	margin: auto;
+}
+.send_more_text.data-v-7c308ccd{
+	line-height:50rpx;
+	font-size: 28rpx;
+	color: #191f25;
+	text-align: center;
+	margin-top: 10rpx;
+}
+/*语音弹窗*/
+.voice_tc_view.data-v-7c308ccd{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 88;
+	background: transparent;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.voice_tc_cont.data-v-7c308ccd{
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 99999;
+	border-radius: 30rpx;
+	width: 250rpx;
+	height: 250rpx;
+}
+.voice_tc_cont_active.data-v-7c308ccd{
+	background-color: rgba(250,87,65, 0.9);
+}
+.voice_tc_time.data-v-7c308ccd{
+	text-align: center;
+	font-size: 24rpx;
+	color: #ffffff;
+	letter-spacing: 2rpx;
+	height: 26rpx;
+	line-height: 26rpx;
+}
+.che_hui.data-v-7c308ccd{
+	width: 82rpx;
+	height: 108rpx;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -2rpx;
+	margin-bottom: 36rpx;
+}
+.send_voice_new.data-v-7c308ccd{
+	width: 55rpx;
+	height: 87rpx;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 28rpx;
+	margin-bottom: 28rpx;
+}
+.voice_tc_des.data-v-7c308ccd{
+	text-align: center;
+	font-size: 24rpx;
+	color: rgba(255,255,255,0.8);
+}
+

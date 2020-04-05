@@ -1,0 +1,91 @@
+
+.box.data-v-06b458f8{
+    margin-left: 35rpx;
+    margin-right: 35rpx;
+    margin-bottom: 10rpx;
+}
+.one_box.data-v-06b458f8{
+    width: 20%;
+    /*align-items: center;*/
+}
+.status_icon.data-v-06b458f8{
+    width: 123rpx;
+    height: 122rpx;
+    position: absolute;
+    right: 12rpx;
+    top: -76rpx;
+}
+.status_icons.data-v-06b458f8{
+    width: 123rpx;
+    height: 122rpx;
+    position: absolute;
+    right: 12rpx;
+    top: -76rpx;
+}
+/*步骤图片样式*/
+.status_img_yes.data-v-06b458f8{
+    width: 30rpx;
+    height: 30rpx;
+    margin: 27rpx auto 5rpx auto;
+}
+.status_img_no.data-v-06b458f8{
+    width: 20rpx;
+    height: 20rpx;
+    margin: 32rpx auto 5rpx auto;
+}
+/*3种线样式*/
+.line_yes.data-v-06b458f8{
+    background-color: #74a2ff;
+    width: 100%;
+    height: 2px;
+    position: relative;
+    top: 43rpx;
+    left: 50%;
+}
+.line_no.data-v-06b458f8{
+    background-color: #ebebeb;
+    width: 100%;
+    height: 2px;
+    position: relative;
+    top: 43rpx;
+    left: 50%;
+}
+.line_none.data-v-06b458f8{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 2px;
+    position: relative;
+    top: 43rpx;
+    left: 50%;
+}
+/*2种步骤字体样式*/
+.is_status_text.data-v-06b458f8{
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    text-align: center;
+}
+.no_status_text.data-v-06b458f8{
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #c0c1c3;
+    text-align: center;
+}
+.belonger_name.data-v-06b458f8{
+    font-family: PingFang-SC-Medium;
+    font-size: 24rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 70rpx;
+    letter-spacing: 0rpx;
+    color: #a3a5a8;
+    text-align: center;
+}
+
+

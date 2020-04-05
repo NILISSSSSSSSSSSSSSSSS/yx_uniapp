@@ -1,0 +1,220 @@
+
+.top_fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 200;
+    padding-top: calc(25px + 20rpx);
+    padding-bottom: 20rpx;
+    box-sizing: border-box;
+}
+.top_fixed_cont{
+    padding: 0 40rpx;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.top_fixed_back_view{
+    width: 80rpx;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+}
+.top_fixed_title{
+    text-align: center;
+    font-family: PingFang-SC-Bold;
+    font-size: 36rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    color: #191f25;
+    max-width: 12em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.top_fixed_right{
+    width: 80rpx;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+}
+.top_fixed_back{
+    width: 18rpx;
+    height: 33rpx;
+    margin: auto auto auto 0;
+}
+.deptName_view{
+    font-family: PingFang-SC-Medium;
+    font-size: 22rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #a3a5a8;
+    line-height: 40rpx;
+    text-align: center;
+}
+page {
+    height: 100%;
+    background-color: #f8f8f8;
+    width: 100%;
+    margin: 0;
+    font-family: "\5FAE\8F6F\96C5\9ED1", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+.no_ago_msg_text {
+    color: #333333;
+    font-size: 20rpx;
+    margin-top: 30rpx;
+    text-align: center;
+}
+.empty_link_view {
+    height: 310rpx;
+    width: 100%;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+}
+.message_detail {
+    height: 100%;
+    width: 100%;
+    background: #f8f8f8;
+    box-sizing: border-box;
+}
+.message_detail .message_cont_has_name{
+    position: fixed;
+    top: calc(25px + 150rpx);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: #f8f8f8;
+}
+.message_detail .message_cont_no_name{
+    position: fixed;
+    top: calc(25px + 110rpx);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: #f8f8f8;
+}
+.message_cont {
+    width: 100%;
+    height: 100%;
+    padding: 0 30rpx 160rpx;
+    box-sizing: border-box;
+    background: #f8f8f8;
+}
+.message_item {
+    width: 100%;
+    margin-bottom: 25rpx;
+    padding-right: 20rpx;
+}
+.msg_send_time_view {
+    text-align: center;
+    font-size: 24rpx;
+    margin: 40rpx 0;
+}
+.msg_send_time_text {
+    min-width: 150rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    border-radius: 6rpx;
+    background: #dddddd;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+    will-change: transform;
+    max-width: 230rpx;
+    margin: 0 auto;
+    font-size: 20rpx;
+    color: #ffffff;
+}
+.sned_msg_view {
+    width: 100%;
+    bottom: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 99;
+}
+.service_link_view {
+    background: #FFFFFF;
+    width: 90%;
+    border-radius: 3px;
+    will-change: transform;
+    box-sizing: border-box;
+    padding: 20rpx 30rpx;
+    font-size: 28rpx;
+    color: #333333;
+    line-height: 42rpx;
+    margin: 30rpx auto;
+}
+.service_link_cont {
+    padding-bottom: 20rpx;
+}
+.service_link_title {
+    margin-bottom: 20rpx;
+}
+.service_link_item {
+    color: #4DAAF0;
+    text-decoration: underline;
+    margin-bottom: 6rpx;
+}
+.top_empty_view {
+    height: 30rpx;
+    width: 100%;
+}
+/* 优惠券隐藏btn */
+.coupon_hide_btn {
+    position: fixed;
+    right: 10rpx;
+    bottom: 250rpx;
+    width: 90rpx;
+    height: 100rpx;
+    opacity: 0.9;
+    background: url(http://cdn.haofang.net/static/uuminiapp/im/coupon/coupon_redbag.png) no-repeat 0 0;
+    background-size: 100%;
+    margin-bottom: 30rpx;
+    text-align: center;
+    vertical-align: middle;
+    display: -webkit-box;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.coupon_hide_btn_text {
+    width: 100%;
+    height: 18rpx;
+    font-size: 18rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 37rpx;
+    letter-spacing: 0px;
+    color: #ffd800;
+    text-align: center;
+}
+.coupon-success {
+    width: 590rpx;
+    background-color: #fef6e9;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 24rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 50rpx;
+    letter-spacing: 0px;
+    color: #fe943e;
+    padding: 25rpx 30rpx;
+    margin-bottom: 20rpx;
+}
+.iphone_x{
+    height: 30rpx;
+}
+

@@ -1,0 +1,1 @@
+<view class="head_view data-v-5ce12646"><image mode="aspectFill" src="{{avatar}}" data-event-opts="{{[['error',[['imgError',['$event']]]]]}}" binderror="__e" class="data-v-5ce12646"></image></view>

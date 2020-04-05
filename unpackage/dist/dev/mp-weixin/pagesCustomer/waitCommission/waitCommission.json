@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "待结佣",
+  "usingComponents": {
+    "scroll-loading": "/components/scrollLoading",
+    "screen-customer": "/components/screenCustomer",
+    "screen-customer-of-direct-customer": "/components/screenCustomerOfDirectCustomer"
+  }
+}

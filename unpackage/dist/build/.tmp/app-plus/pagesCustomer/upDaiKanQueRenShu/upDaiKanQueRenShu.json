@@ -1,0 +1,18 @@
+{
+  "navigationBarTitleText": "带看确认书",
+  "softinputNavBar": "none",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "",
+        "fontSrc": "/static/app-plus/iconfont_customer.ttf",
+        "fontSize": "0",
+        "float": "right",
+        "id": "del"
+      }
+    ]
+  },
+  "usingComponents": {
+    "show-modal": "/components/showModal"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="{{['textMe_read_text data-v-23aff264',isRead?'textMe_read':'textMe_unread']}}">{{isRead?"已读":"未读"}}</view>

@@ -1,0 +1,30 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "新客户",
+  "softinputNavBar": "none",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "",
+        "fontSrc": "/static/app-plus/iconfont_customer.ttf",
+        "fontSize": "22px",
+        "float": "right",
+        "id": "add"
+      }
+    ]
+  },
+  "pullToRefresh": {
+    "support": true,
+    "color": "#3396fb",
+    "style": "circle",
+    "offset": "30px"
+  },
+  "scrollIndicator": "none",
+  "usingComponents": {
+    "scroll-loading": "/components/scrollLoading",
+    "show-modal": "/components/showModal",
+    "screen-customer": "/components/screenCustomer",
+    "screen-customer-of-direct-customer": "/components/screenCustomerOfDirectCustomer",
+    "no-data": "/components/noData"
+  }
+}

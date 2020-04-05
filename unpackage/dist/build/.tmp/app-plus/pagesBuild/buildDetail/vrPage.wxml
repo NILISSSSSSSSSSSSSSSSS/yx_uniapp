@@ -1,0 +1,1 @@
+<view class="vr-page"><block wx:if="{{urlval}}"><web-view webview-styles="{{webviewStyles}}" src="{{urlval}}"></web-view></block></view>

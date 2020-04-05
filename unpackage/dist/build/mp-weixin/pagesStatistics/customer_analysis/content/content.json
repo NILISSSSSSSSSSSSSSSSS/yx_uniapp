@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "trend_line": "/pagesStatistics/customer_analysis/content/charts/trend_line",
+    "cust_statistic_info_arcbar": "/pagesStatistics/customer_analysis/content/charts/cust_statistic_info_arcbar",
+    "sell_proportion_pie": "/pagesStatistics/customer_analysis/content/charts/sell_proportion_pie"
+  },
+  "component": true
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "read-status": "/pagesMsg/components/im/readStatus",
+    "circle1": "/components/loading/circle1"
+  },
+  "component": true
+}

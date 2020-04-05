@@ -1,0 +1,79 @@
+
+page,.scroll_view{
+    width: 100%;
+    background: #ffffff;
+    height: 100%;
+}
+.top_view{
+    height: 34rpx;
+    width: 100%;
+}
+.week_item{
+    background: #ffffff;
+    margin-bottom: 34rpx;
+}
+.week_title{
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.week_title_line{
+    width: 115rpx;
+    height: 2rpx;
+    background-color: #191f25;
+    opacity: 0.2;
+    margin: auto 0;
+}
+.week_title_text{
+    font-weight: bold;
+    width: 120rpx;
+    text-align: center;
+    font-family: PingFang-SC-Bold;
+    font-size: 34rpx;
+    font-stretch: normal;
+    color: #191f25;
+}
+.week_content{
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+    padding-left: 30rpx;
+}
+.week_content_item{
+    height: 150rpx;
+    width: 150rpx;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+    margin-right: 30rpx;
+}
+.week_content_item:nth-child(4n){
+    margin-right: 0;
+}
+.week_content_val{
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    line-height: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #191f25;
+    margin-bottom: 20rpx;
+    text-align: center;
+}
+.week_content_time{
+    text-align: center;
+    font-family: PingFang-SC-Medium;
+    font-size: 24rpx;
+    line-height: 24rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #7d8184;
+}
+.week_content_item_active{
+    background-color: rgba(0,132,255,0.08);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+

@@ -1,0 +1,17 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "待结佣",
+  "softinputNavBar": "none",
+  "pullToRefresh": {
+    "support": true,
+    "color": "#3396fb",
+    "style": "circle",
+    "offset": "30px"
+  },
+  "usingComponents": {
+    "scroll-loading": "/components/scrollLoading",
+    "show-modal": "/components/showModal",
+    "screen-customer": "/components/screenCustomer",
+    "screen-customer-of-direct-customer": "/components/screenCustomerOfDirectCustomer"
+  }
+}

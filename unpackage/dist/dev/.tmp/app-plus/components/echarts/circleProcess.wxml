@@ -1,0 +1,1 @@
+<view style="margin:auto;"><canvas style="{{'width:'+(cWidth+'px')+';'+('height:'+(cHeight+'px')+';')}}" canvas-id="circleProcess" id="circleProcess"></canvas></view>

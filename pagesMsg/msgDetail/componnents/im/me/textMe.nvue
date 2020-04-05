@@ -1,0 +1,83 @@
+
+
+<template>
+    <div class="text_view">
+        <div class="textMeView">
+            <text class="text" v-if="!item.hasEmoji">{{ item.content }}</text>
+
+            <div class="text_emoji" v-if="item.hasEmoji && item.emoji && item.emoji.length>0">
+                <block v-for="(info, key) in (item.emoji[0])" :key="key">
+                    <image v-if="info.emoji" :src="info.url" resize="contain" class='emoji_text'></image>
+
+                    <text v-else-if="info != null">{{ info }}</text>
+                </block>
+            </div>
+        </div>
+
+        <read-status :isRead="item.isRead"></read-status>
+    </div>
+</template>
+
+<style scoped>
+    .text_view{
+        margin-right: 22upx;
+        margin-bottom: 34upx;
+        padding-top: 6upx;
+        box-sizing: border-box;
+    }
+    .textMeView{
+        min-width: 40upx;
+        max-width: 468upx;
+        border-radius: 16upx;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        background-color: #0084ff;
+        padding-top: 19upx;
+        padding-left: 20upx;
+        padding-right: 20upx;
+        padding-bottom: 19upx;
+        box-sizing: border-box;
+        align-items: center;
+        text-align: left;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .text{
+        color: #ffffff;
+        padding:0;
+        margin:0;
+        font-size: 32upx;
+        line-height: 36upx;
+        text-align: left;
+    }
+    .text_emoji{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .emoji_text{
+        width: 46upx;
+        height: 46upx;
+        line-height: 23upx;
+        display: flex;
+    }
+</style>
+
+<script>
+    import readStatus from "../readStatus.nvue";
+
+    export default {
+        props: {
+            item: {
+                type: Object,
+                default: {}
+            },
+        },
+        components:{
+            readStatus
+        }
+    }
+</script>

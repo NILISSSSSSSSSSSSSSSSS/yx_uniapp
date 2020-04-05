@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "新客户",
+  "usingComponents": {
+    "scroll-loading": "/components/scrollLoading",
+    "screen-customer": "/components/screenCustomer",
+    "screen-customer-of-direct-customer": "/components/screenCustomerOfDirectCustomer",
+    "no-data": "/components/noData"
+  }
+}

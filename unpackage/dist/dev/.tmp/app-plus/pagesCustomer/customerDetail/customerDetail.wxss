@@ -1,0 +1,415 @@
+
+.status_box.data-v-2a92cb7a{
+    margin: 50rpx 40rpx 0 40rpx;
+}
+.status_text.data-v-2a92cb7a{
+    font-size: 24rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #a3a5a8;
+    margin: auto 0 auto 0;
+}
+.status_time.data-v-2a92cb7a{
+    font-size: 24rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #f95742;
+    margin: auto 0 auto 0;
+}
+/*基本信息*/
+.info_title.data-v-2a92cb7a{
+    font-family: PingFang-SC-Bold;
+    font-size: 38rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: 42rpx;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    margin-left: 40rpx;
+    margin-top: 20rpx;
+}
+.b-d-info.data-v-2a92cb7a {
+    width: 100%;
+    height: auto;
+    padding: 40rpx 40rpx 0 40rpx;
+    background-color: #ffffff;
+    /*margin-top: 20upx;*/
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+}
+.b-d-info>view.data-v-2a92cb7a {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+            flex: 0 0 50%;
+    width: 50%;
+    height: 60rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    color: #a3a5a8;
+    font-size: 28rpx;
+    line-height: 1;
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+}
+.b-d-info>view>text.data-v-2a92cb7a {
+    line-height: 38rpx;
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+    color: #191f25;
+    text-align: left;
+    max-width: 220rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.callPhone.data-v-2a92cb7a{
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+    color: #0084ff;
+}
+.otherRequirement_view.data-v-2a92cb7a{
+    font-size: 28rpx;
+    line-height: 30rpx;
+    color: #a3a5a8;
+    background-color: #ffffff;
+    margin: 0 40rpx 20rpx 40rpx;
+}
+.otherRequirement_view>text.data-v-2a92cb7a{
+    color: #191f25;
+    font-size: 28rpx;
+    line-height: 2;
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+}
+.null_view.data-v-2a92cb7a{
+    width: 100%;
+    height: 20rpx;
+    background-color: #f8f8f8;
+}
+/*客户状态*/
+.status_title.data-v-2a92cb7a{
+    font-family: PingFang-SC-Bold;
+    font-size: 38rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    margin: auto auto auto 0;
+}
+/*添加跟进*/
+.follow.data-v-2a92cb7a{
+    margin: 50rpx 40rpx 0 40rpx;
+}
+.follow_title.data-v-2a92cb7a{
+    font-family: PingFang-SC-Bold;
+    font-size: 38rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+}
+.add_follww.data-v-2a92cb7a{
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.add_follww>text.data-v-2a92cb7a{
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 30rpx;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    margin: auto;
+}
+.follow_img.data-v-2a92cb7a{
+    width: 30rpx;
+    height: 30rpx;
+    margin: auto 12rpx auto auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.follow_list.data-v-2a92cb7a{
+    margin-top: 40rpx;
+    margin-bottom: 180rpx;
+}
+/*底部信息*/
+.footer_box.data-v-2a92cb7a{
+    width: 100%;
+    height: 150rpx;
+    background-color: #ffffff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+}
+.footer_box_up.data-v-2a92cb7a{
+    width: 50%;
+}
+.footer_box_up_iphonex.data-v-2a92cb7a{
+    width: 50%;
+    margin-bottom: 25rpx;
+}
+.broker_avatar.data-v-2a92cb7a{
+    width: 84rpx;
+    height: 84rpx;
+    margin: auto 0rpx auto 35rpx;
+    border-radius: 100%;
+}
+.no_broker_avatar.data-v-2a92cb7a{
+    width: 84rpx;
+    height: 84rpx;
+    margin: auto 0rpx auto 35rpx;
+    border-radius: 100%;
+    background: #3396fb;
+    overflow: hidden;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+    color: #ffffff;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 82rpx;
+}
+.dept_name_info.data-v-2a92cb7a{
+    margin: auto 0 auto 20rpx;
+}
+.dept_name.data-v-2a92cb7a{
+    font-size: 30rpx;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    margin-bottom: auto auto 8rpx auto;
+    text-align: left;
+    /*max-width: 100%;*/
+    max-width: 150rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.broker_name.data-v-2a92cb7a{
+    font-size: 29rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #7d8184;
+    line-height: 45rpx;
+}
+.developer_icon.data-v-2a92cb7a{
+    margin: auto auto auto 10rpx;
+    /*padding: 5upx 6upx;*/
+    padding: 1rpx 6rpx 5rpx 6rpx;
+    font-family: PingFang-SC-Medium;
+    font-size: 22rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #3072f6;
+    background-color: #eff4fe;
+    width: 95rpx;
+}
+.broker_icon.data-v-2a92cb7a{
+    margin: auto auto auto 10rpx;
+    /*padding: 5upx 6upx;*/
+    padding: 1rpx 6rpx 5rpx 6rpx;
+    font-family: PingFang-SC-Medium;
+    font-size: 22rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #f95742;
+    background-color: #fff2f0;
+}
+/*成交信息*/
+.deal_info.data-v-2a92cb7a{
+    -webkit-flex-wrap:wrap;
+            flex-wrap:wrap;
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+    font-family: PingFang-SC-Medium;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 40rpx;
+    letter-spacing: 0rpx;
+    color: #a3a5a8;
+    margin-left: 40rpx;
+    margin-top: 40rpx;
+    margin-bottom: 30rpx;
+}
+.deal_info>view.data-v-2a92cb7a{
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+}
+.deal_info_item.data-v-2a92cb7a{
+    font-family: PingFang-SC-Medium;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 40rpx;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    margin: auto 20rpx auto 0rpx;
+}
+/*附件信息*/
+.look_book.data-v-2a92cb7a{
+    font-family: PingFang-SC-Medium;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 50rpx;
+    letter-spacing: 0rpx;
+    color: #a3a5a8;
+    margin: 40rpx auto 50rpx 40rpx;
+}
+.look_img.data-v-2a92cb7a{
+    width: 91rpx;
+    height: 91rpx;
+}
+/*按钮*/
+.buttons.data-v-2a92cb7a{
+    margin: 0 40rpx 50rpx 40rpx;
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #3072f6;
+}
+.buttons>view.data-v-2a92cb7a{
+    margin-right: 30rpx;
+    -webkit-flex-wrap:wrap;
+            flex-wrap:wrap;
+}
+.buttons>view.data-v-2a92cb7a:last-child{
+    margin-right: 0;
+}
+.copywriting.data-v-2a92cb7a{
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 37rpx;
+    letter-spacing: 0rpx;
+    color: #666666;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.page_box.data-v-2a92cb7a{
+    overflow-x: hidden;
+}
+.intentionLayout_ma.data-v-2a92cb7a{
+    margin-right: 10rpx;
+}
+.cexiaorengouView_view.data-v-2a92cb7a{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 99;
+    background: rgba(0,0,0,0.5);
+}
+.cexiaorengouView.data-v-2a92cb7a{
+    background: #FFFFFF;
+}
+.cexiaoTitle.data-v-2a92cb7a{
+    background-color: #f6f6f6;
+    height: 70rpx;
+}
+.quxiao.data-v-2a92cb7a{
+    font-size: 26rpx;
+    margin: auto auto auto 50rpx;
+    color: #999999;
+}
+.chedanliyou.data-v-2a92cb7a{
+    opacity: 0.8;
+    font-size: 32rpx;
+    margin: auto;
+}
+.quedin.data-v-2a92cb7a{
+    font-size: 26rpx;
+    color: #3396fb;
+    margin: auto 50rpx auto auto;
+}
+.other-text-area.data-v-2a92cb7a {
+    position: relative;
+    width: 93%;
+    height: auto;
+    background-color: #ffffff;
+    margin: auto auto 15rpx auto;
+}
+.other-text-area>textarea.data-v-2a92cb7a {
+    width: 100%;
+    height: 308rpx;
+    background-color: #f6f6f6;
+    border-radius: 4px;
+    font-size: 24rpx;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+.area_size.data-v-2a92cb7a{
+    font-size: 26rpx;
+}
+/*流程按钮样式*/
+.progress_button.data-v-2a92cb7a{
+    font-size: 30rpx;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    background-color: #f2f6ff;
+    padding: 30rpx 80rpx 30rpx 80rpx;
+    border-radius: 10rpx;
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+}
+.progress_button>text.data-v-2a92cb7a{
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+    color: #0084ff;
+}
+.progress_button>image.data-v-2a92cb7a{
+    width: 26rpx;
+    height: 28rpx;
+    margin-right: 10rpx;
+}
+.look_view_button.data-v-2a92cb7a{
+    text-align: center;
+    height: 60rpx;
+    border-radius: 10rpx;
+    margin-right: 40rpx;
+}
+.look_view_button>text.data-v-2a92cb7a{
+    margin: auto;
+    line-height: 60rpx;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 1rpx;
+    color: #0084ff;
+}
+.look_view_button>image.data-v-2a92cb7a{
+    width: 26rpx;
+    height: 28rpx;
+    margin: auto 10rpx auto auto;
+}
+.null_cexiaorengou.data-v-2a92cb7a{
+    width: 100%;
+    height: 15rpx;
+    background-color: #FFFFFF;
+}
+.progress_bar.data-v-2a92cb7a{
+    margin-bottom: 30rpx;
+}
+

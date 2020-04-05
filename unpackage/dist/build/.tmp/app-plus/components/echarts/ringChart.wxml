@@ -1,0 +1,1 @@
+<canvas style="{{'width:'+(cWidth+'px')+';'+('height:'+(cHeight+'px')+';')}}" canvas-id="canvasRing" id="canvasRing"></canvas>

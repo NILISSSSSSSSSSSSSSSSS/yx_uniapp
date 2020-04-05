@@ -1,0 +1,116 @@
+
+
+<template>
+    <div class="audio-chart" :style="{height:height}">
+        <live-pusher class="pusher"
+                     id="videoPush"
+                     ref="videoPush"
+                     :url="url"
+                     :mode="mode"
+                     :enable-camera="enableCamera"
+                     :audio-volume-type="audioVolumeType"
+                     @netstatus="netstatus"
+                     @statechange="statechange" />
+        <div class="accept" @click.stop="accept">接听</div>
+    </div>
+</template>
+
+<script>
+    import {Notify} from "../../utils/Notify";
+    import {Notification} from "../../utils/Notification";
+
+    class PrivateData {
+        static ImChart = null;
+        static livePusherContext = null;
+    }
+
+    export default {
+        data() {
+            return {
+                url: "",
+                mode: "SD",
+                height: "100%",
+                enableCamera: false,
+                audioVolumeType: "media"
+            }
+        },
+        created() {
+            const res = uni.getSystemInfoSync();
+            this.height = res.windowHeight + "px";
+            PrivateData.ImChart = getApp().globalData.imChartClass;
+        },
+        mounted() {
+            PrivateData.livePusherContext = uni.createLivePusherContext('videoPush', this);
+            console.error("PrivateData.livePusherContext",PrivateData.livePusherContext);
+            // 语音信息
+            new Notification().addObserver(this,"AudioChartInfo",Notify.AudioChartInfo.Name);
+        },
+
+        methods: {
+            AudioChartInfo(name, info) {
+                console.error("info", info);
+                this.url = info.url;
+                setTimeout(function () {
+                    PrivateData.livePusherContext.start()
+                }, 100)
+            },
+
+            // 接听
+            accept() {
+                console.error("点击了接听");
+                PrivateData.ImChart.netcall.response({
+                    accepted: true, // 是否接听，true为接听；false为拒绝
+                    caller: PrivateData.ImChart.beCalling.caller, // 本通通话主叫方账号
+                    type: PrivateData.ImChart.beCalling.type, // 本通通话类型
+                    cid: PrivateData.ImChart.beCalling.cid // 本通通话房间ID
+                })
+                .then((res) => {
+                    console.warn(res,"接听成功");
+                    // 开启本端的音视频通话
+                    PrivateData.ImChart.netcall.startRtc({ mode: 0 })
+                    .then((obj) => {
+                        // obj结构 => {uid,account,cid}
+                        console.log('开启音视频成功', obj)
+                    })
+                    .catch(err => {
+                        console.warn('开启音视频失败', err)
+                    })
+                })
+                .catch((error) => {
+                    console.error(error,"接听")
+                })
+            },
+
+            statechange(e) {
+                console.error("statechange", e);
+            },
+            netstatus(e) {
+                console.warn("netstatus", e);
+            }
+        }
+    }
+</script>
+
+<style>
+    .audio-chart{
+        width: 100%;
+        position: relative;
+    }
+    .pusher{
+        width: 100%;
+        height: 100%;
+    }
+    .accept{
+        position: absolute;
+        border-radius: 200upx;
+        width: 200upx;
+        height: 200upx;
+        line-height: 200upx;
+        text-align: center;
+        bottom: 200upx;
+        left: 100upx;
+        background-color: #ff5400;
+        color: #FFFFFF;
+        font-size: 32upx;
+    }
+</style>

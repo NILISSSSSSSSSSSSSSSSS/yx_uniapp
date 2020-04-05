@@ -1,0 +1,7 @@
+
+page,.index{
+    width: 100%!important;
+    height: 100%!important;
+    background-color: #ffffff!important;
+}
+

@@ -1,0 +1,157 @@
+
+
+<template>
+    <div class="voice_view">
+        <div class="voiceMeView">
+            <div v-if="item.isSendUser && !item.sendFail" class="loading_view">
+                <circleLoading :width="'30'" :height="'30'"></circleLoading>
+            </div>
+
+            <image v-if="item.sendFail" @click.stop="againSend" class="again_send" src="http://cdn.haofang.net/static/xffx-uniapp/msg/again_send.png"></image>
+
+            <div @click.stop="playAudio" class="voice_cont" :style="{maxWidth: voiceMaxWidth, width: voiceWidth}">
+                <text class="voice_length">{{ item.voiceLength }}″</text>
+
+                <image v-if="!isPlayIng" class="voiceMeView_img"
+                       src="http://cdn.haofang.net/static/uuminiapp/changeImg/listen_icon.png?t=2"></image>
+                <image v-if="isPlayIng" class="voiceMeView_img"
+                       src="http://cdn.haofang.net/static/uuminiapp/im/voice_me.gif"></image>
+            </div>
+        </div>
+
+        <read-status :isRead="item.isRead"></read-status>
+    </div>
+</template>
+
+<script>
+    import circleLoading from "@/components/nvue/circleLoading.nvue";
+    import readStatus from "../readStatus.nvue";
+
+    export default {
+        data() {
+            return {
+                isPlayIng: false,
+                voiceMaxWidth: "70%",
+                voiceWidth: "50%",
+            }
+        },
+
+        props: {
+            item: {
+                type: Object,
+                default: {}
+            },
+            index: {
+                type: String | Number,
+                default() {
+                    return "null";
+                }
+            },
+            currentClickIndex: {
+                type: String | Number,
+                default() {
+                    return "err";
+                }
+            }
+        },
+
+        components:{circleLoading,readStatus},
+
+        mounted() {
+            let width = 750;
+            let voiceMaxWidth = width * 0.6;
+            let voiceWidth = (voiceMaxWidth/16 * (this.item.voiceLength
+            && this.item.voiceLength <= 16 ? this.item.voiceLength : 16));
+            if(voiceWidth < 228) {
+                voiceWidth = 228;
+            }
+            this.voiceWidth = voiceWidth + "upx";
+            this.voiceMaxWidth = voiceMaxWidth + "upx";
+        },
+
+        watch: {
+            currentClickIndex(newValue, oldValue) {
+                this.isPlayIng = !!(this.currentClickIndex == this.index);
+            }
+        },
+
+        methods: {
+            playAudio() {
+                if(this.isPlayIng) {
+                    this.$emit("voicePlayChange", {
+                        url: src,
+                        isPlayIng: this.isPlayIng,
+                        index: "err"
+                    });
+                    return;
+                }
+
+                let src = this.item.content;
+                if (src.indexOf("?audioTrans&type=mp3") >= -1){
+                    src = src.replace("?audioTrans&type=mp3", "");
+                }
+                this.$emit("voicePlayChange", {
+                    url: src,
+                    isPlayIng: this.isPlayIng,
+                    index: this.index
+                });
+            },
+
+            againSend() {
+                new ImSendMessage(this.item.messageId)
+                    .againSend(this.item.msg, this.item.content);
+            }
+        },
+    }
+</script>
+
+<style scoped>
+    .voice_view{
+        margin-bottom: 34upx;
+        margin-right: 22upx;
+        padding-top: 6upx;
+        box-sizing: border-box;
+    }
+    .voiceMeView{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .voice_cont{
+        text-align: right;
+        background-color: #0084ff;
+        line-height:1.5;
+        min-height:40upx;
+        padding:19upx 20upx;
+        box-sizing:border-box;
+        border-radius:16upx;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .voice_length{
+        margin-right: 20upx;
+        color:#ffffff;
+        font-size: 32upx;
+    }
+    .loading_view{
+        line-height:1.5;
+        height:40upx;
+        margin-right: 10upx;
+    }
+    .again_send{
+        width: 40upx;
+        height: 40upx;
+        margin-right: 10upx;
+    }
+    .voiceMeView_img{
+        width: 36upx;
+        height: 36upx;
+        margin: auto 0;
+        flex-shrink: 0;
+    }
+</style>
+

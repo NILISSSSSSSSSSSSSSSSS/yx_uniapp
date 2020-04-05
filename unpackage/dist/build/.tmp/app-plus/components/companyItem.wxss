@@ -1,0 +1,117 @@
+
+page.data-v-34d605b6{
+    background-color: #FFFFFF;
+}
+.box.data-v-34d605b6{
+    box-sizing: border-box;
+}
+.commission_list.data-v-34d605b6{
+}
+.company_info_view.data-v-34d605b6{
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    height: 144rpx;
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+    /*padding-right: 40upx;*/
+    border-bottom: solid 1px #F5F5F5;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+.company_info_open_view.data-v-34d605b6{
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    height: 144rpx;
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+.company_name.data-v-34d605b6{
+    font-family: PingFang-SC-Bold;
+    margin-right: 15rpx;
+    font-size: 36rpx;
+    line-height: 45rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    text-align: left;
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+    max-width: 260rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.company_info_num.data-v-34d605b6{
+    font-family: 1234567890-Regular;
+    font-size: 36rpx;
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+    font-weight: bold;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+}
+.company_info_text.data-v-34d605b6{
+    font-family: PingFang-SC-Medium;
+    font-size: 24rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #a3a5a8;
+    opacity: 0.8;
+}
+.commission_icon.data-v-34d605b6{
+    width: 26rpx;
+    height: 14rpx;
+    margin: auto 0 auto 0;
+}
+.company_info_item.data-v-34d605b6{
+    width: 160rpx;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+    margin-right: 10rpx;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    text-align: center;
+}
+/*展开的客户列样式*/
+.show_customer_list.data-v-34d605b6{
+    background-color: #fafafa;
+    padding-bottom: 10rpx;
+    box-sizing: border-box;
+}
+.show_customer_list .status_is_check.data-v-34d605b6{
+    font-family: PingFang-SC-Bold;
+    font-size: 30rpx;
+    line-height: 100rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #0084ff;
+    margin: auto 30rpx auto 0rpx;
+}
+.status_no_check.data-v-34d605b6{
+    font-family: PingFang-SC-Medium;
+    font-size: 26rpx;
+    line-height: 100rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #a3a5a8;
+    margin: auto 30rpx auto 0rpx;
+}
+.line_box.data-v-34d605b6{
+    border-left: solid 1px #dddddd;
+    height: 30rpx;
+    margin: auto 30rpx auto 0rpx;
+}
+.check_button.data-v-34d605b6{
+    margin-left: 80rpx;
+}
+

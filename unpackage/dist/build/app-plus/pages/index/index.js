@@ -1,0 +1,2 @@
+setCssToHead(["body,.",[1],"index{ width: 100%!important; height: 100%!important; background-color: #ffffff!important; }\n",],undefined,{path:"./pages/index/index.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/index/index.wxml') } }));

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "softinputNavBar": "none",
+  "usingComponents": {
+    "scroll-loading": "/components/scrollLoading"
+  }
+}

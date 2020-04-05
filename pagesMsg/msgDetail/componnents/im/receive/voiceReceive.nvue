@@ -1,0 +1,148 @@
+
+
+<template>
+    <div class="voice_view">
+        <div class="voiceMeView">
+            <div @click.stop="playAudio" class="voice_cont" :style="{maxWidth: voiceMaxWidth, width: voiceWidth}">
+                <image v-if="!isPlayIng" class="voiceMeView_img"
+                       src="http://cdn.haofang.net/static/kdbweb/zdzfminiapp/zdzfPlatform/common/laba_l.png"></image>
+                <image v-if="isPlayIng" class="voiceMeView_img"
+                       src="http://cdn.haofang.net/static/kdbweb/zdzfminiapp/zdzfPlatform/common/laba_l.gif"></image>
+
+                <text class="voice_length">{{ item.voiceLength }}″</text>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style scoped>
+    .voice_view{
+        margin-bottom: 34upx;
+        margin-left: 22upx;
+        padding-top: 6upx;
+        box-sizing: border-box;
+    }
+    .voiceMeView{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .voice_cont{
+        text-align: right;
+        background-color: #ffffff;
+        line-height:1.5;
+        min-height:40upx;
+        padding:19upx 20upx;
+        box-sizing:border-box;
+        border-radius:16upx;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-width: 1upx;
+        border-style: solid;
+        border-color: #ebebeb;
+    }
+    .voice_length{
+        margin-left: 20upx;
+        color:#191f25;
+        font-size: 28upx;
+    }
+    .loading_view{
+        line-height:1.5;
+        height:40upx;
+        margin-right: 10upx;
+    }
+    .again_send{
+        width: 40upx;
+        height: 40upx;
+        margin-right: 10upx;
+    }
+    .voiceMeView_img{
+        width: 36upx;
+        height: 36upx;
+        margin: auto 0;
+        flex-shrink: 0;
+    }
+</style>
+
+<script>
+    export default {
+        data() {
+            return {
+                isPlayIng: false,
+                voiceMaxWidth: "70%",
+                voiceWidth: "50%",
+            }
+        },
+
+        props: {
+            item: {
+                type: Object,
+                default: {}
+            },
+            index: {
+                type: String | Number,
+                default() {
+                    return "null";
+                }
+            },
+            currentClickIndex: {
+                type: String | Number,
+                default() {
+                    return "err";
+                }
+            }
+        },
+
+        components:{},
+
+        mounted() {
+            let width = 750;
+            let voiceMaxWidth = width * 0.6;
+            let voiceWidth = (voiceMaxWidth/16 * (this.item.voiceLength
+            && this.item.voiceLength <= 16 ? this.item.voiceLength : 16));
+            if(voiceWidth < 228) {
+                voiceWidth = 228;
+            }
+            this.voiceWidth = voiceWidth + "upx";
+            this.voiceMaxWidth = voiceMaxWidth + "upx";
+        },
+
+        watch: {
+            currentClickIndex(newValue, oldValue) {
+                this.isPlayIng = !!(this.currentClickIndex == this.index);
+            }
+        },
+
+        methods: {
+            playAudio() {
+                if(this.isPlayIng) {
+                    this.$emit("voicePlayChange", {
+                        url: src,
+                        isPlayIng: this.isPlayIng,
+                        index: "err"
+                    });
+                    return;
+                }
+
+                let src = this.item.content;
+                if (src.indexOf("?audioTrans&type=mp3") >= -1){
+                    src = src.replace("?audioTrans&type=mp3", "");
+                }
+                this.$emit("voicePlayChange", {
+                    url: src,
+                    isPlayIng: this.isPlayIng,
+                    index: this.index
+                });
+            },
+
+            againSend() {
+                new ImSendMessage(this.item.messageId)
+                    .againSend(this.item.msg, this.item.content);
+            }
+        },
+    }
+</script>

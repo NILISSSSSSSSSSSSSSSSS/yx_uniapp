@@ -1,0 +1,70 @@
+
+
+<template>
+    <image class="loading_img" ref="my"
+           :style="{width: width+'px',height: height+'px'}"
+           src="http://cdn.haofang.net/static/xffx-uniapp/common/loading_3.png">
+    </image>
+</template>
+
+<style scoped>
+    .loading_img{
+        width: 48px;
+        height: 48px;
+        margin-top: auto;
+        margin-left: auto;
+        margin-bottom: auto;
+        margin-right: auto;
+    }
+</style>
+
+<script>
+    import Binding from "weex-bindingx";
+
+    export default {
+        props: {
+            width: {
+                type: String | Number,
+                default() {
+                    return 48;
+                }
+            },
+            height: {
+                type: String | Number,
+                default() {
+                    return 48;
+                }
+            },
+            opacity: {
+                type: String | Number,
+                default() {
+                    return 1;
+                }
+            }
+        },
+
+        mounted() {
+            Binding .bind({
+                eventType: 'timing',
+                props: [
+                    {
+                        element: this.getEl(this.$refs.my),
+                        expression: 't/3',
+                        property: 'transform.rotateZ'
+                    },
+                    {
+                        element: this.getEl(this.$refs.my),
+                        expression: this.opacity,
+                        property: 'opacity'
+                    }
+                ]
+            });
+        },
+
+        methods: {
+            getEl(e) {
+                return e.ref;
+            }
+        }
+    }
+</script>

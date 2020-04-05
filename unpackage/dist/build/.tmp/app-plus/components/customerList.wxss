@@ -1,0 +1,114 @@
+
+.listItem.data-v-9d611114{
+    margin-left: 41rpx;
+    margin-right: 41rpx;
+    box-sizing: border-box;
+    height: 192rpx;
+    border-bottom: solid 1px #F5F5F5;
+}
+.listItem.data-v-9d611114:first-child{
+    padding-top: 0rpx;
+}
+.name.data-v-9d611114{
+    font-size: 32rpx;
+    font-weight: bold;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    /*line-height: 1;*/
+    margin: auto 20rpx auto 0rpx;
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+    max-width: 250rpx;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.sex.data-v-9d611114{
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    line-height: 32rpx;
+    margin: auto 20rpx auto 0rpx;
+}
+.phone.data-v-9d611114{
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #191f25;
+    line-height: 32rpx;
+    margin: auto 10rpx auto 0rpx;
+}
+.directCustomer.data-v-9d611114{
+    font-size: 22rpx;
+    line-height: 22rpx;
+    background-color: #eff4fe;
+    border-radius: 6rpx;
+    letter-spacing: 0rpx;
+    color: #3072f6;
+    margin: auto;
+    padding: 5rpx;
+    text-align: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+/*灰色按钮*/
+.status_orange.data-v-9d611114{
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #ffb109;
+    margin: auto 0rpx auto 0rpx;
+}
+.status_green.data-v-9d611114{
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #44bc6e;
+    margin: auto 0rpx auto 0rpx;
+}
+.status_gray.data-v-9d611114{
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #a3a5a8;
+    margin: auto 0rpx auto 0rpx;
+}
+.demand.data-v-9d611114{
+    font-size: 22rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 45rpx;
+    letter-spacing: 0rpx;
+    color: #a3a5a8;
+    margin-top: 6rpx;
+}
+.demand_build.data-v-9d611114{
+    margin: auto 30rpx auto 0rpx;
+}
+.demand_room.data-v-9d611114{
+    margin: auto auto auto 0rpx;
+    -webkit-flex-shrink:0;
+            flex-shrink:0;
+    letter-spacing: 0;
+}
+.room.data-v-9d611114{
+    margin-right: 10rpx;
+}
+.price.data-v-9d611114{
+    font-size: 22rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 30rpx;
+    letter-spacing: 0rpx;
+    color: #a3a5a8;
+}
+
